@@ -1,16 +1,11 @@
 continente(
-	codigo
 	nombre
 	descripcion
-	activo
 );
 pais(
 	id_continente -- continente
 	codigo
 	nombre
-	nacionalidad
-	es_extrangero
-
 );
 departamento(
 	id_pais -- pais
@@ -21,13 +16,11 @@ municipio(
 	id_departamento -- departamento
 	codigo
 	nombre
-	activo
 );
 area_geografica(
 	codigo
 	nombre
 	descripcion
-	activo
 );
 
 genero(
@@ -51,7 +44,6 @@ clasificacion_ocupacion(
 	nombre
 	nivel_clasificacion
 	descripcion
-	activo
 ); 
 nivel_escolaridad(
 	nombre
@@ -61,12 +53,13 @@ condicion_alfabetica(
 	nombre
 	descripcion
 );
-idiomas_lenguas(
-	codigo
+
+idioma_lengua(
 	nombre
 	familia_linguistica
-	activo
 );
+
+
 estado_ebriedad(
 	nombre
 	descripcion
@@ -110,10 +103,21 @@ ocupacion(
 ubicacion(
 	id_municipio -- municipio
 	id_area_geografica -- area_geografica
-	zona
+	ciudad
 	direccion_referencia
 );
 
+tipo_residencia(
+	nombre
+	descripcion
+);
+residencia_persona(
+	id_persona -- persona
+	id_ubicacion -- ubicacion
+	tipo_residencia -- tipo_residencia
+	fecha_inicio
+	fecha_fin
+);
 
 
 
@@ -121,16 +125,19 @@ persona(
 	Nombres
 	apellidos
 	fecha_nacimiento
-	genero
-	grupo_etnico
-	estado_civil
-	condicion_alfabetica
-	nivel_escolaridad 
 	cui
-	id_ubicacion -- ubicacion
+	sexo -- genero
+	grupo_etnico -- pueblo_pertenencia
+	estado_civil -- estado_civil
+	condicion_alfabetica -- condicion_alfabetica
+	nivel_escolaridad  -- nivel_escolaridad
 	id_origen -- ubicacion
-	id_nacionalidad -- pais pte
+	es_extranjero
+);
 
+idioma_persona(
+	id_persona -- persona
+	id_lengua -- idioma_lengua
 );
 
 hecho(
@@ -218,7 +225,7 @@ denuncia_registrada_vcm(
 	id_denuncia -- denuncia
 	rango_edad
 	escolaridad
-	pueblo_pertenencia
+	etnia -- pueblo_pertenencia
 	orientacion_sexual
 	estado_caso
 	valor
@@ -273,8 +280,6 @@ caso_discriminacion_estructural(
 	id_hecho -- hecho
 	id_victima -- persona
 	id_tipo_discriminacion -- tipo_discriminacion
-	idioma_comunidad -- idiomas_lenguas
-	anio_registro
 );
 
 tipo_agresion_intrafamiliar(

@@ -16,7 +16,7 @@ departamento(
 	id_pais -- pais
 	codigo
 	nombre
-);
+); 
 municipio(
 	id_departamento -- departamento
 	codigo
