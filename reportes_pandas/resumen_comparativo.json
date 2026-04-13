@@ -1,0 +1,71 @@
+{
+  "archivos": [
+    {
+      "archivo": "20240528163342pWf6BcBWj8taVS3Q3mRKxgDsvwPejgH8.xlsx",
+      "ruta": "Violencia/Hechos-Delicitivos/Agraviados/20240528163342pWf6BcBWj8taVS3Q3mRKxgDsvwPejgH8.xlsx",
+      "hojas_con_datos": 1,
+      "filas_totales": 444513,
+      "columnas_totales_sumadas": 23,
+      "columnas_normalizadas_unicas": 23
+    },
+    {
+      "archivo": "20240524231759eHmz6DmFKboNQ5Y3OlqNkbi9izmXULaP.xlsx",
+      "ruta": "Violencia/Faltas judiciales/20240524231759eHmz6DmFKboNQ5Y3OlqNkbi9izmXULaP.xlsx",
+      "hojas_con_datos": 1,
+      "filas_totales": 17908,
+      "columnas_totales_sumadas": 23,
+      "columnas_normalizadas_unicas": 23
+    }
+  ],
+  "interseccion_columnas": [
+    "g_edad_60ymas",
+    "g_edad_80ymas",
+    "num_corre"
+  ],
+  "solo_por_archivo": {
+    "20240524231759eHmz6DmFKboNQ5Y3OlqNkbi9izmXULaP.xlsx": [
+      "ano_boleta",
+      "area_geo_inf",
+      "cond_alfabetismo_inf",
+      "depto_boleta",
+      "depto_nacimiento_inf",
+      "edad_inf",
+      "edad_quinquenales",
+      "est_conyugal_inf",
+      "est_ebriedad_inf",
+      "falta_inf",
+      "g_primarios",
+      "gran_grupos",
+      "grupo_etnico_inf",
+      "mes_boleta",
+      "muni_boleta",
+      "nacimiento_inf",
+      "nacionalidad_inf",
+      "niv_escolaridad_inf",
+      "sexo_inf",
+      "subg_principales"
+    ],
+    "20240528163342pWf6BcBWj8taVS3Q3mRKxgDsvwPejgH8.xlsx": [
+      "ano_denuncia",
+      "ano_hecho",
+      "delito_com",
+      "depto_ocu_hecho",
+      "dia_denuncia",
+      "dia_hecho",
+      "dia_sem_denuncia",
+      "dia_sem_hecho",
+      "edad_agrav",
+      "est_conyugal",
+      "g_edad_de0_80ymas",
+      "g_hora_denuncia",
+      "g_hora_denuncia_man_tar_noch",
+      "hora_denuncia",
+      "mes_hecho",
+      "mupio_ocu_hecho",
+      "principales_delitos",
+      "reg_mes",
+      "sexo_agraviados",
+      "zona_ocu_hecho"
+    ]
+  }
+}

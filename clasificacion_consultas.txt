@@ -1,0 +1,75 @@
+❌ Consultas NO directas (complejas)
+🔗 Cruces entre dominios (MUY importantes)
+
+Estas son las más difíciles:
+
+Relación entre el tipo de empleo y la ocurrencia de hechos delictivos
+→ necesitas cruzar ocupación + delitos (no hay llave directa)
+Relación entre casos de desnutrición aguda infantil y registros de violencia intrafamiliar por departamento
+→ salud + delitos
+Correlación entre casos de desnutrición y ocurrencia de hechos delictivos por municipio
+→ además de cruzar, implica estadística
+📊 Estadísticas / análisis avanzados
+Tasa de denuncias de violencia estructural procesadas vs. no procesadas
+→ necesitas campo “procesado” + cálculo de porcentaje
+Porcentaje de denuncias por discriminación según etnia
+→ filtro + proporciones
+Tasa de denuncias de violencia infantil en población escolarizada vs. no escolarizada
+→ necesitas cruzar educación + denuncias
+Tasa de morbilidad materna infantil por año y departamento
+→ necesitas población base (no siempre está en dataset)
+🧠 Ambiguas o mal definidas
+
+Estas pueden darte problemas al defender el proyecto:
+
+Cantidad de casos de violencia infantil relacionados con trabajo infantil
+→ ¿cómo defines “relacionados”? no hay relación explícita
+Casos de trabajo infantil por sector económico (agricultura, industria, etc.)
+→ necesitas mapear ocupaciones → sector (transformación extra)
+Idiomas hablados por víctimas de discriminación
+→ probablemente NO tienes ese campo
+Número de personas por hogar en casos con denuncias de violencia intrafamiliar
+→ necesitas datos de hogar (no aparecen en lo que mostraste)
+🔄 Comparativas complejas
+Comparativa entre nivel de escolaridad y tipo de falta judicial cometida
+→ requiere cruce + análisis (no solo conteo)
+Comparativa entre enfermedades transmitidas por vectores y nivel de urbanización por departamento
+→ salud + ubicación + clasificación extra
+Comparativa de violencia estructural entre áreas urbanas y rurales
+→ necesitas definir “violencia estructural”
+Comparativa de casos de retardo en el desarrollo entre grupos etarios y sexo por región
+→ múltiples dimensiones + dataset específico
+🧬 Datos de salud específicos (dependen del dataset)
+Departamentos con mayor incidencia de enfermedades crónicas según diagnóstico CIE-10
+→ necesitas códigos CIE-10
+Top 5 municipios con mayor cantidad de casos de Chagas, Zika y Chikungunya combinados
+→ necesitas filtrar múltiples enfermedades específicas
+⚠️ Las más problemáticas (alerta roja 🔴)
+
+Si tu dataset es limitado, estas son las más difíciles de justificar:
+
+Correlación desnutrición vs delitos
+Violencia infantil relacionada con trabajo infantil
+Personas por hogar
+Idiomas hablados
+Morbilidad (requiere población total)
+✅ En contraste (para que veas la diferencia)
+
+Estas SÍ son directas:
+
+Número de necropsias por año
+Homicidios por año y departamento
+Denuncias por municipio
+Top delitos
+Casos por enfermedad
+
+👉 solo requieren COUNT + GROUP BY
+
+🧠 Resumen claro
+
+No directas =
+
+cruzan datasets
+requieren interpretación
+usan porcentajes/tasas
+o necesitan datos que no tienes
