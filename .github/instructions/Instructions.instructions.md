@@ -72,4 +72,29 @@ Instrucciones del proyecto para generacion, extraccion y carga de datos.
 - Si no hay nombres u otros datos de identidad, se permite completar con Faker segun reglas generales.
 - Si no hay fecha de nacimiento, generar una fecha plausible dentro del rango de datos y consistente con la edad objetivo definida para la fuente.
 
+## Continuidad Entre Chats
+
+- Si el chat se corta, continuar desde el ultimo archivo del orden de insercion sin reiniciar cargas ya aplicadas.
+- Antes de cada nuevo lote, validar conteos por tabla para confirmar estado real de la DB.
+- Mantener idempotencia: todos los scripts de carga deben usar validaciones NOT EXISTS o reglas equivalentes para evitar duplicados.
+
+### Estado Operativo de Referencia
+
+- La tabla tipo_falta ya tiene carga de catalogo.
+- La tabla falta (transaccional) no debe asumirse cargada hasta ejecutar un archivo fuente transaccional de faltas judiciales.
+- El involucramiento recomendado para faltas judiciales es Infractor (si la fuente no indica otro rol especifico).
+
+### Entregables Obligatorios
+
+- Entregar un archivo de insercion por cada catalogo o tabla destino.
+- Organizar catalogos en sql/inserts/catalogos y transaccionales en sql/inserts/transaccional.
+- Para lotes grandes, dividir en batches numerados por fuente (ejemplo: 100_, 101_, 102_).
+
+### Orden de Insercion para Retomar
+
+- 1) Catalogos base y geografia.
+- 2) Catalogos de delitos y homologacion entre fuentes.
+- 3) Carga transaccional por archivo fuente siguiendo su flujo de modelo.
+- 4) Al terminar cada archivo: validacion de conteos y registro de tablas afectadas.
+
 

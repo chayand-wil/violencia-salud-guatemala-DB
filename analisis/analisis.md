@@ -210,6 +210,7 @@ involucrado_hecho(
 estado_denuncia(
 	nombre
 	descripcion
+	es_procesada
 );
 
 denuncia(
@@ -217,6 +218,13 @@ denuncia(
 	fecha_denuncia
 	id_estado_denuncia -- estado_denuncia
 	id_entididad_denuncia -- institucion_organicacion
+);
+
+denuncia_estado_historial(
+	id_denuncia -- denuncia
+	id_estado_denuncia -- estado_denuncia
+	fecha_estado
+	observaciones
 );
 
 
@@ -310,11 +318,48 @@ tipo_agresion_ninez(
 	descripcion
 );
 
+estado_escolarizacion(
+	nombre
+	descripcion
+	es_escolarizado
+);
+
+sector_economico(
+	nombre
+	descripcion
+);
+
+tipo_trabajo_infantil(
+	nombre
+	descripcion
+);
+
+caso_violencia_ninez(
+	id_hecho -- hecho
+	id_victima -- persona
+	id_tipo_agresion_ninez -- tipo_agresion_ninez
+	id_estado_escolarizacion -- estado_escolarizacion
+	relacionado_trabajo_infantil
+);
+
+caso_ninez_trabajo_infantil(
+	id_caso_violencia_ninez -- caso_violencia_ninez
+	id_sector_economico -- sector_economico
+	id_tipo_trabajo_infantil -- tipo_trabajo_infantil
+	horas_semanales
+);
+
+embarazo_adolescente(
+	id_hecho -- hecho
+	id_persona -- persona
+	edad_gestante
+	semana_gestacion
+);
+
 
 queja_agresion_ninez(
 	id_departamento_registro -- departamento
 	id_tipo_agresion -- tipo_agresion_ninez
-	valor
 );
 
 
@@ -349,7 +394,6 @@ caso_violencia_intrafamiliar(
 	quien_reporta
 	otras_victimas_total
 	agresores_otros_total
-	instancia_denuncia_hecho
 	organismo_jurisdiccional
 	conducente
 	ley_aplicable
@@ -364,6 +408,25 @@ caso_vif_articulo_legal(
 caso_vif_medida_seguridad(
 	id_caso_violencia_intrafamiliar -- caso_violencia_intrafamiliar
 	id_tipo_medida_seguridad -- tipo_medida_seguridad
+);
+
+hogar(
+	id_ubicacion -- ubicacion
+	tipo_hogar
+	descripcion
+);
+
+persona_hogar(
+	id_persona -- persona
+	id_hogar -- hogar
+	fecha_inicio
+	fecha_fin
+	parentesco_referencia
+);
+
+caso_vif_hogar(
+	id_caso_violencia_intrafamiliar -- caso_violencia_intrafamiliar
+	id_hogar -- hogar
 );
 
 
@@ -381,6 +444,16 @@ grupo_etario_salud(
 	nombre
 	orden
 );
+
+denominador_poblacional(
+	id_ubicacion -- ubicacion
+	anio_referencia
+	id_grupo_etario_salud -- grupo_etario_salud
+	id_genero -- genero
+	total_poblacion
+	fuente
+);
+
 condicion_salud(
 	codigo_cie10
 	nombre

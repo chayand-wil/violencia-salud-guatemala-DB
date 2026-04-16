@@ -1,0 +1,38 @@
+SET NAMES UTF8;
+
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Antejuicio', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Antejuicio'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Análisis', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Análisis'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Apelacion especial', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Apelacion especial'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Archivado', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Archivado'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Archivo físico', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Archivo físico'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Asignación', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Asignación'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Casación', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Casación'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Clausurado', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Clausurado'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Conciliación', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Conciliación'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Concluido', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Concluido'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Conexado', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Conexado'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Conexado Final', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Conexado Final'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Convertido', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Convertido'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Criterio de oportunidad', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Criterio de oportunidad'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Desestimado', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Desestimado'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'En Investigación', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('En Investigación'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Mediación', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Mediación'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Pendiente', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Pendiente'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Procedimiento Intermedio', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Procedimiento Intermedio'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Recepción básica', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Recepción básica'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Recurrido', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Recurrido'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Remision centro de mediación', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Remision centro de mediación'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Remisión', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Remisión'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Remitido a familia', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Remitido a familia'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Remitido a menores', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Remitido a menores'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Remitido a otra fiscalía', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Remitido a otra fiscalía'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Remitido a paz', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Remitido a paz'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Sentencia', 'Denuncias MP VCM', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Sentencia'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Sentenciado', 'Denuncias MP VCM', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Sentenciado'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Sin selección', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Sin selección'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Sobreseido', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Sobreseido'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Suspendido', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Suspendido'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Suspensión a la perscusión penal', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Suspensión a la perscusión penal'));
+INSERT INTO estado_denuncia (nombre, descripcion, es_procesada) SELECT 'Trámite', 'Denuncias MP VCM', 0 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM estado_denuncia WHERE UPPER(nombre)=UPPER('Trámite'));
+
+COMMIT;
