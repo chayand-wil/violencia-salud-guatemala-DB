@@ -1,0 +1,12 @@
+Municipio	
+Año	Delito	
+Estado del Caso
+Valor (indica la cantidad de registros a ingresar(otro caso con los mismos datos pero diferente persona))
+
+ubicacion
+persona
+hecho
+hecho_delictivo
+involucrado_hecho
+caso_mp();
+

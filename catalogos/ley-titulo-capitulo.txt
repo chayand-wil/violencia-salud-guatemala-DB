@@ -1,0 +1,40 @@
+--- tipo ley
+1	Ley del Ramo Penal	
+3	Ley Contra la Narcoactividad	
+4	Ley de Equipo Terminales Móviles	
+5	Ley Contra la Delincuencia Organizada	
+6	Ley de Armas y Municiones	
+7	Ley Contra el Lavado de Dinero u Otros Activos	
+10	Otros	
+999	Ignorado	
+
+--- titulo
+1	Vida e integridad de la persona	
+2	Libertad y seguridad de las personas	
+3	De los delitos contra el patrimonio	
+4	De los delitos contra la administración de justicia	
+0	Otros	
+99	Ignorado	
+
+--- capitulo
+1	Homicidios simples (Código Penal)	
+2	Homicidios calificados (Código Penal)	
+3	Lesiones (Código Penal)	
+4	De los delitos contra la libertad individual (Código Penal)	
+5	Hurto (Código Penal)	
+6	Robo (Código Penal)	
+11	De los delitos y de sus penas (Ley contra la Narcoactividad)	
+12	Delitos, sanciones y prohibiciones (Ley de Equipos Terminales Móviles)	
+13	Delitos de la Delincuencia Organizada (Ley Contra la Delincuencia Organizada)	
+14	De las coacciones y amenazas (Código Penal)	
+15	De la extorsión y del chantaje (Código Penal)	
+16	De la estafa (Código Penal)	
+17	Del encubrimiento (Código Penal)	
+18	Sobre la tenencia y transporte (Ley de Armas y Municiones)	
+19	De la portación (Ley de Armas y Municiones)	
+20	Relacionadas con la importación, exportación, venta, fabricación, modificación y reacondicionamiento de armas y municiones (Ley de Armas y Municiones)	
+21	Modificación y reparación de armas de fuego (Ley de Armas y Municiones)	
+22	De la importación (Ley de Armas y Municiones)	
+23	Del delito, de los responsables y de las penas (Ley Contra el Lavado de Dinero u Otros Activos)	
+0	Otros	
+999	Ignorado	

@@ -1,0 +1,15 @@
+persona(
+    Nombres   fake
+    apellidos   fake
+    cui   fake
+    sexo -- genero (femenino)
+    estado_civil -- estado_civil (desconocido)
+    condicion_alfabetica -- condicion_alfabetica (desconocido)
+    nivel_escolaridad  -- nivel_escolaridad (desconocido)
+    es_extranjero
+);
+
+    <!-- id_ubicacion_procedencia -- municipio
+    fecha_nacimiento
+    etnia -- pueblo_pertenencia
+    id_orientacion_sexual -- orientacion_sexual -->

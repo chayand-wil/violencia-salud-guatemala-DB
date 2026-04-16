@@ -1,0 +1,21 @@
+-- tipos de hechos
+
+necropsias
+evaluacion_inacif
+exhumanciones
+
+falta_judicial
+atencion
+violencia_intrafamiliar
+violencia_esctructural
+violencia_contra_la_ninez (revisar si tambien son hechos delictivos)
+hecho_delictivo
+detencion
+medida_seguridad
+
+
+
+
+
+persona-hecho
+- involucramiento(sindicado)

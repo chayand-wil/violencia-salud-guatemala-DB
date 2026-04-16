@@ -1,0 +1,21 @@
+#extraer los delitos
+---
+DEPARTAMENTO (municipio random)
+AÑO (mes_dia random)
+HECHO DELICTIVO	
+DELITO	
+VALOR(cantidad de registros)
+
+
+
+ubicacion
+persona(femenino)
+hecho(VCM)
+involucrado_hecho(Victimario)
+hecho_delictivo
+
+
+
+
+
+

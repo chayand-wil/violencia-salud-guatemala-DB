@@ -18,12 +18,15 @@ municipio(
 	nombre
 );
 area_geografica(
-	codigo
 	nombre
 	descripcion
 );
 
 genero(
+	nombre
+	descripcion
+);
+orientacion_sexual(
 	nombre
 	descripcion
 );
@@ -53,12 +56,15 @@ condicion_alfabetica(
 	nombre
 	descripcion
 );
+involucramiento(
+	nombre
+	descripcion
+);
 
 idioma_lengua(
 	nombre
 	familia_linguistica
 );
-
 
 estado_ebriedad(
 	nombre
@@ -66,11 +72,19 @@ estado_ebriedad(
 );
 
 tipo_hecho(
-	codigo
 	nombre
 	descripcion
-	activo
 );
+tipo_institucion(
+	nombre
+	descripcion
+);
+
+institucion_organicacion(
+	nombre_institucion
+	id_tipo_institucion -- tipo_institucion
+);
+
 tipo_falta(
 	codigo
 	nombre
@@ -100,17 +114,20 @@ ocupacion(
 	id_Gran_grupos -- clasificacion_ocupacion
 );
 
-ubicacion(
-	id_municipio -- municipio
-	id_area_geografica -- area_geografica
-	ciudad
-	direccion_referencia
-);
-
 tipo_residencia(
 	nombre
 	descripcion
 );
+
+
+ubicacion(
+	id_municipio -- municipio
+	id_area_geografica -- area_geografica
+	ciudad
+	zona
+	direccion_referencia
+);
+
 residencia_persona(
 	id_persona -- persona
 	id_ubicacion -- ubicacion
@@ -119,14 +136,13 @@ residencia_persona(
 	fecha_fin
 );
 
-
-
 persona(
 	Nombres
 	apellidos
 	fecha_nacimiento
 	cui
 	sexo -- genero
+	id_orientacion_sexual -- orientacion_sexual
 	grupo_etnico -- pueblo_pertenencia
 	estado_civil -- estado_civil
 	condicion_alfabetica -- condicion_alfabetica
@@ -147,46 +163,43 @@ hecho(
 );
 
 falta(
-	id_persona -- persona
+	id_hecho -- hecho
 	id_tipo_falta -- tipo_falta
-	id_ubicacion -- ubicacion
-	fecha_boleta
 );
 
-tipo_hecho_falta(
-	id_tipo_hecho -- tipo_hecho
-	id_falta -- falta
-);
-
-hecho_delito(
+hecho_delictivo( 
 	id_hecho -- hecho
 	id_delito -- delito_cometido
 );
 
-victima_hecho(
+involucrado_hecho(
 	id_hecho -- hecho
-	id_victima -- persona
+	id_involucrado -- persona
+	id_tipo_involucramiento - involucramiento
+);
+
+estado_denuncia(
+	nombre
+	descripcion
 );
 
 denuncia(
+	id_hecho -- hecho
 	fecha_denuncia
-	id_hecho -- hecho
+	id_estado_denuncia -- estado_denuncia
+	id_entididad_denuncia -- institucion_organicacion
 );
 
-detencion(
-	id_hecho -- hecho
-	id_detenido -- persona
-);
-
-sindicado(
-	id_hecho -- hecho
-	id_sindicado -- persona
+ 
+clasificacion_evaluacion(
+	nombre
+	descripcion
 );
 
 evaluacion_medica_inacif(
 	id_hecho -- hecho
 	id_persona -- persona
-	clasificacion_evaluacion
+	id_clasificacion_evaluacion -- clasificacion_evaluacion
 );
 
 exhumacion(
@@ -203,7 +216,7 @@ sentencia(
 	fecha_sentencia
 	id_persona -- persona
 	tipo_fallo
-	involucramiento
+	id_involucramiento -- involucramiento
 );
 
 sentencia_hecho(
@@ -211,42 +224,48 @@ sentencia_hecho(
 	id_hecho -- hecho
 );
 
+sede(
+	id_institucion_organicacion -- institucion_organicacion
+	descripcion
+	id_ubicacion -- municipio
+);
+
+tipo_atencion(
+	nombre
+	descripcion
+);
+
 atencion_victima(
 	id_hecho -- hecho
-	id_ubicacion_sede -- ubicacion
-	id_ubicacion_procedencia -- ubicacion
-	tipo_delito_atendido
-	atencion_brindada
-	orientacion_sexual
-	valor
+	id_sede -- sede
+	id_victima -- persona
+	tipo_delito_atendido -- delito
+	id_atencion_brindada -- tipo_atencion
 );
 
 denuncia_registrada_vcm(
 	id_denuncia -- denuncia
-	rango_edad
-	escolaridad
-	etnia -- pueblo_pertenencia
-	orientacion_sexual
-	estado_caso
-	valor
 );
 
-delito_vida_feminicidio(
-	id_hecho -- hecho
-	estado_caso
-	valor
+estado_caso(
+
 );
 
-hecho_delictivo_vcm(
+caso_feminicidio(
 	id_hecho -- hecho
-	hecho_delictivo
-	valor
+	id_estado_caso -- estado_caso
+	
+);
+
+
+caso_mp(
+	id_estado_caso -- estado_caso
+	id_delito_cometido -- delito_cometido
 );
 
 medida_seguridad(
 	id_hecho -- hecho
-	despacho
-	valor
+	id_institucion_organicacion -- institucion_organicacion
 );
 
 sentencia_oj(
@@ -255,16 +274,20 @@ sentencia_oj(
 	valor
 );
 
+
 sentencia_mp(
 	id_sentencia -- sentencia
 	indicador
 	valor
 );
 
+
+
 tipo_agresion_ninez(
 	nombre
 	descripcion
 );
+
 tipo_discriminacion(
 	nombre
 	descripcion
@@ -349,3 +372,6 @@ registro_salud(
 );
 
 		
+
+
+

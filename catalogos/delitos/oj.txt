@@ -1,0 +1,98 @@
+1	Homicidio simple
+2	Homicidio estado de emoción violenta
+3	Homicidio  en riña tumultuaria
+4	Homicidio  preter-intencional
+5	Homicidio culposo
+6	Parricidio
+7	Asesinato
+8	Lesiones simples
+9	Lesiones  específicas
+10	Lesiones   gravísimas
+11	Lesiones  graves
+12	Lesiones  leves
+13	Lesiones  en riña
+14	Lesiones  culposas
+15	Plagio o secuestro
+16	Hurto simple
+17	Hurto agravado
+18	Robo simple
+19	Robo agravado
+45	Tránsito internacional
+46	Siembra y cultivo
+47	Comercio, tráfico y almacenamiento ilícito
+48	Posesión para el consumo
+49	Promoción y fomento
+50	Facilitación de medios
+51	Asociaciones delictivas
+52	Procuración de impunidad o evasión
+53	Promoción o estimulo a la drogadicción
+54	Encubrimiento real
+55	Encubrimiento personal
+56	Robo de equipo terminal móvil
+57	Adquisición de equipos terminales móviles de dudosa procedencia
+58	Alteración de equipos terminales móviles
+59	Comercialización de equipos terminales móviles denunciados como robados, hurtados, extraviados o alterados
+60	Comercialización de equipos terminales móviles por persona sin Registro
+61	Uso de equipos terminales móviles en centros de privación de libertad
+62	Ingreso de equipos terminales móviles a centros de privación de libertad
+63	Uso de equipos terminales móviles por funcionarios y empleados públicos
+64	Conspiración mediante equipos terminales móviles
+65	Secuestro y comiso de equipos terminales móviles
+66	Plazo para obtener el registro y la constancia de inscripción
+67	Suspensión de los servicios
+68	Implementación y Actualización de Sistemas Modernos de Registro
+69	Conspiración
+70	Asociación ilícita
+71	Asociación ilegal de gente armada
+72	Entrenamiento para actividades ilícitas
+73	Uso ilegal de uniformes o insignias
+74	Comercialización de vehículos y similares robados en el extranjero o en el territorio nacional
+75	Obstrucción a la Justicia
+76	Exacciones intimidatorias
+77	Obstrucción extorsiva de tránsito
+78	Atentado contra los servicios de telecomunicación
+79	Fabricación o transformación
+80	Transacciones e inversiones ilícitas
+82	Extorsión
+83	Casos especiales de estafa
+84	Amenazas
+85	Encubrimiento propio
+86	Portación ilegal de armas de fuego de uso civil y/o deportivo
+87	Tenencia ilegal de municiones
+88	Transporte y/o traslado ilegal de armas de fuego
+89	Lavado de dinero u otros activos
+90	Portación ilegal de armas hechizas o de fabricación artesanal
+91	Tráfico ilícito de armas de fuego o municiones
+92	Tránsito ilícito de armas de fuego o municiones
+93	De la portación de un arma de fuego sin la licencia correspondiente
+94	Depósito ilegal de armas de fuego bélicas o de uso exclusivo del Ejército de Guatemala o de las fuerzas de seguridad y orden público del Estado, explosivos, armas químicas, biológicas, atómicas, trampas bélicas y armas experimentales
+95	Depósito ilegal de armas de fuego de uso civil y/o deportivas
+96	Depósito de armas de fuego, municiones y componentes específicos en el almacén fiscal
+97	Disparos sin causa justificada
+98	Exportación ilegal de armas de fuego
+99	Exportación ilegal de municiones para armas de fuego
+100	Fabricación de armas de fuego hechizas o artesanales
+101	Fabricación ilegal de armas de fuego
+102	Fabricación ilegal de municiones
+103	Falta en la portación de arma de fuego con licencia vencida
+104	Importación ilegal de armas
+105	Importación ilegal de municiones.
+106	Modificación ilegal de armas de fuego
+107	Portación de arma de fuego en estado de embriaguez o bajo efectos de drogas, estupefacientes o barbitúricos
+108	Portación ilegal de armas blancas de uso exclusivo del Ejército de Guatemala o de las fuerzas de seguridad y orden público del Estado
+109	Portación ilegal de armas de fuego bélicas o de uso exclusivo del Ejército de Guatemala o de las fuerzas de seguridad y orden público del Estado
+110	Portación ilegal de explosivos, armas químicas, biológicas, atómicas, trampas bélicas y armas experimentales
+111	Portación ostentosa de arma de fuego
+112	Tenencia de armería ilegal
+113	Tenencia ilegal de armas de fuego bélicas o de uso exclusivo del Ejercito de Guatemala o de las fuerzas de seguridad y orden público del Estado, explosivos, armas químicas, biológicas, atómicas, trampas bélicas y armas experimentales
+114	Tenencia ilegal de armas de fuego artesanales o hechizas, armas con número de registro alterado, armas con número borrado o no legalmente marcadas por la DIGECAM
+115	Tenencia ilegal de máquina reacondicionadora de munición para armas de fuego
+116	Tenencia ilegal de materiales de fabricación y/o reacondicionamiento de municiones para armas de fuego
+117	Tenencia o portación de arma de fuego con número de registro alterado, borrado o no legalmente marcada por la DIGECAM
+118	Transporte y/o traslado ilegal de municiones
+119	Venta ilegal de armas de fuego
+120	Venta ilegal de municiones
+121	Otras portaciones
+122	Delito de sustracción de las armas incautadas o sujetas a comiso
+0	Otros
+999	Ignorado

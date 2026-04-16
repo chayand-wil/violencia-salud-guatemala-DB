@@ -1,0 +1,75 @@
+-- grupo de causas
+1	Homicidios
+2	Lesiones
+3	Contra el Patrimonio
+5	Contra la Libertad
+6	Extorsión y chantaje
+7	Otras causas
+
+-- CAUSA COMETIDA
+1	Homicidio por arma de fuego
+2	Homicidio por arma blanca
+3	Homicidio por arma contundente
+4	Homicidio por artefacto explosivo
+5	Homicidio por estrangulamiento
+6	Homicidio por linchamiento
+7	Lesiones por arma de fuego
+8	Lesiones por arma blanca
+9	Lesiones por arma contundente
+10	Lesiones por artefacto explosivo
+11	Lesiones por linchamiento
+12	Agresión
+15	Secuestro
+16	Autosecuestro
+17	Allanamiento de morada
+19	Robo a residencias
+20	Robo a comercios
+21	Hurto a comercios
+22	Robo de vehículos
+23	Robo de camiones/trailers con mercadería
+24	Robo de motocicletas
+25	Portación ilegal arma de fuego
+26	Portación arma blanca
+27	Robo a bancos
+28	Robos a turistas extranjeros
+29	Robo a turistas nacionales
+30	Robo a peatones
+31	Robo a blindados
+32	Robo a buses urbanos
+33	Robo a buses extraurbanos
+34	Cobro ilegal de impuesto a buses
+35	Robo en iglesias
+36	Otros robos y hurtos
+37	Impuesto a negocios
+38	En desalojos de fincas
+39	En allanamientos judiciales
+40	Extorsión
+41	Portación artefacto explosivo
+42	Tenencia de droga
+43	Tráfico de droga
+44	Siembra y cultivo de drogas
+45	Delitos forestales
+46	Cohecho
+47	Orden de captura
+48	Riña
+49	Daños
+50	Ebriedad y escándalo
+51	Escándalo bajo efectos de droga
+55	Estafa
+56	Perversión de menores
+58	Contrabando
+59	Disparos
+60	Falsificación de documentos
+61	Falsificación de moneda
+62	Disturbios
+63	Tenencia de licores clandestirnos
+64	Rapto
+65	Actos inmorales en la vía pública
+66	Maltrato infantil
+67	Juegos ilícitos
+68	Otras causas (motivo) (Código interno)
+
+
+
+
+

@@ -1,0 +1,5 @@
+hecho
+    tipo_hecho(detencion)
+persona
+involucrado_hecho
+

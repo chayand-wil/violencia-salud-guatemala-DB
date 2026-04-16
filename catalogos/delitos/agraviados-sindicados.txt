@@ -1,0 +1,449 @@
+1	Abandono por estado afectivo
+2	Abandono colectivo de funciones, cargos o empleos
+3	Abandono de cargo
+4	Abandono de niños y de personas desvalidas
+5	Aborto preterintencional
+6	Aborto agravado
+7	Aborto con o sin consentimiento
+8	Aborto calificado
+9	Aborto procurado
+10	Abuso contra particulares
+11	Abuso de autoridad
+12	Actividades contra la seguridad interior de la nación
+15	Acusación y denuncia falsas
+17	Adquisición de equipos terminales móviles de dudosa procedencia
+18	Agresión
+21	Agrupaciones ilegales de gente armada
+22	Allanamiento
+23	Allanamiento agravado
+24	Allanamiento ilegal
+25	Alteración de linderos
+26	Alteración de equipos terminales móviles
+27	Alteración maliciosa de número de origen
+28	Alteración o destrucción de información en archivos
+29	Alzamiento de bienes
+30	Amenazas
+31	Anticipación de funciones públicas
+32	Aprehensión ilegal
+33	Apropiación indebida de tributos
+34	Apropiación irregular
+35	Apología del delito
+36	Apropiación y retención indebidas
+37	Asesinato
+38	Asistencia (casa de juegos)
+39	Asociación ilegal de gente armada
+40	Asociación ilícita
+41	Asociaciones delictivas
+42	Atentado
+43	Atentado contra altos funcionarios
+44	Atentado contra el patrimonio natural y cultural de la nación
+45	Atentado contra la seguridad de los transportes, maritimos, fluviales o aéreos
+46	Atentado contra la seguridad de servicios de utilidad pública
+47	Atentado contra los servicios de telecomunicaciones
+48	Atentado contra otros medios de transporte
+49	Calumnia
+50	Cambio del uso de la tierra sin autorización
+51	Casos especiales de contrabando aduanero
+52	Casos especiales de defraudación aduanera
+53	Casos especiales de estafa
+54	Casos especiales de defraudación tributaria
+55	Celebración ilegal de matrimonios
+56	Chantaje
+57	Coacción
+58	Coacción contra la libertad política
+59	Cobro indebido
+60	Cohecho activo
+61	Cohecho pasivo
+62	Colocación ilícita de rótulos
+63	Colusión
+64	Comercialización de equipos terminales móviles denunciados como robados, hurtados, extraviados o alterados
+65	Comercializacion de vehículos y similares robados en el extranjero o en territorio nacional
+66	Comercio, tráfico y almacenamiento ilícito
+67	Competencia desleal
+68	Comercialización de datos personales
+69	Comercialización de equipos terminales móviles por personas sin registro
+72	Conspiración mediante equipos terminales móviles
+73	Contagio venereo
+74	Contra el patrimonio nacional forestal cometidos por autoridades
+75	Contrabando en el ramo de tabacos
+76	Concusión
+77	Conspiración
+78	Consumo ilícito de bebidas alcohólicas o fermentadas
+80	Contaminación
+81	Contaminación industrial
+82	Contra los recursos forestales
+83	Contrabando aduanero
+84	Contrabando en el ramo de alcoholes, bebidas alcohólicas y fermentadas
+85	Contravención de medidas sanitarias
+86	Cooperación en la evasión
+88	Daño
+89	Daño agravado
+90	Portación de un arma de fuego sin la licencia correspondiente
+91	Defraudación aduanera
+92	Defraudación en consumos
+93	Defraudación tributaria
+94	Defraudación en el ramo de alcoholes, bebidas alcohólicas y fermentadas
+95	Defraudación en el ramo de tabacos
+96	Delito cambiario
+97	Delito contra el patrimonio cultural de la nación
+98	Intermediacion financiera
+99	Delito económico especial (derogado por el código penal)
+100	Delito por dolo o culpa (delito deportivo)
+101	Delitos (ley general de caza)
+102	Demolición ilícita
+103	Denegación de justicia
+104	Depósito ilegal de armas de fuego de uso civil y/o deportivas
+105	Uso ilegal de uniformes o insignias
+106	Depredación de bienes culturales
+107	Desobediencia
+108	Cercenamiento de moneda
+109	Desorden público
+110	Desprestigio comercial
+111	Destrucción de registros informáticos
+112	Desacato a los presidentes de los organismos del estado
+113	Desacato de autoridad
+114	Desaparición forzada
+115	Detención irregular
+116	Detenciones ilegales
+117	Difamación
+118	Discriminación
+119	Disparo de arma de fuego
+120	Disparos sin causa justificada
+121	Distribución y comercialización de medicamentos falsificados, productos farmacéuticos falsificados, dispositivos médicos y material médico
+122	Doble representación
+123	Ejecución extrajudicial
+124	Elaboración peligrosa de sustancias alimenticias o terapeúticas
+125	Emisión y circulación de moneda
+126	Emisiones indebidas (monedas, billetes o títulos)
+128	Encubrimiento impropio
+129	Encubrimiento personal
+130	Encubrimiento propio
+131	Encubrimiento real
+132	Enriquecimiento ilícito
+133	Enriquecimiento ilícito de particulares
+134	Entrega indebida de un menor
+135	Envenenamiento de agua o de sustancia alimenticia o medicinal
+136	Equiparación de documentos
+137	Estafa de fluidos
+138	Estafa en la entrega de bienes
+139	Estafa mediante cheque
+140	Estafa mediante informaciones contables
+141	Estafa propia
+142	Estrago
+143	Especulación
+144	Evasión
+145	Evasión culposa
+146	Exacciones intimidatorias
+149	Expedición de moneda falsa o alterada
+150	Expedición de moneda falsa recibida de buena fe
+151	Expendio irregular de medicamentos
+152	Explotación ilegal de recursos naturales
+153	Alteración (receta médica)
+154	Extorsión
+156	Exportación ilegal de armas de fuego
+157	Exportación ilegal de municiones para armas de fuego
+158	Extracción de documentos históricos
+159	Fabricación de armas de fuego hechizas o artesanales
+160	Fabricación ilegal de municiones
+161	Fabricación y tenencia de materiales explosivos
+162	Fabricación de moneda falsa
+163	Fabricación o transformación
+164	Facilitación de medios
+165	Falsedad en certificado
+166	Falsedad ideológica
+167	Falsedad material
+168	Falsificación de documentos privados
+169	Falsificación de placas y distintivos para vehículos
+170	Falsificación de sellos, papel sellado y timbres
+171	Falsificación de billetes de lotería
+172	Falso testimonio
+173	Falsa acusación por delito privado
+174	Falsedad en declaración jurada patrimonial
+175	Falsificación de documentos para el uso de incentivos forestales
+177	Fraude
+178	Homicidio
+179	Homicidio cometido en estado de emoción violenta
+180	Homicidio culposo
+181	Homicidio preterintencional
+182	Homicidio en riña tumultuaria
+183	Hurto
+184	Hurto agravado
+185	Hurto de fluidos
+186	Hurto de uso
+187	Hurto impropio
+188	Hurto o robo sacrílegos
+189	Hurto y robo de bienes arqueológicos
+190	Hurto y robo de tesoros nacionales
+191	Importación ilegal de armas
+192	Importación ilegal de municiones
+193	Importación ilegal de municiones para armas de fuego (Derogado por el DTO. 15-2009)
+194	Incendio
+195	Incendio agravado
+196	Incendio forestal
+197	Incendio y estrago culposo
+198	Incesto agravado
+199	Incitación pública
+200	Incumplimiento de deberes
+201	Financiamiento electoral
+202	Incumplimiento de deberes de asistencia
+203	Incumplimiento de pago
+204	Incumplimiento del deber de presentar declaración jurada patrimonial
+205	Incumplimiento del plan de manejo forestal como delito
+207	Inducción o ayuda al suicidio
+208	Inducción al uso de estupefacientes
+209	Infanticidio
+210	Infracción de privilegio
+212	Ingreso de equipos terminales móviles a centros de privación de libertad
+214	Ingreso ilegal de personas
+215	Inhumaciones y exhumaciones ilegales
+216	Injuria
+217	Instigación a delinquir
+218	Instigación al genocidio
+219	Intimidación pública
+220	Interrupción o entorpecimiento de comunicaciones
+221	Intimidación pública agravada
+222	Introducción de moneda falsa o alterada
+223	Investigaciones o excavaciones ilícitas
+224	Juegos ilícitos
+225	Lavado de dinero u otros activos
+226	Lesión en riña
+227	Lesiones culposas
+228	Espionaje agravado
+229	Lesiones graves
+230	Lesiones gravisimas
+231	Lesiones leves
+232	Lesiones especificas
+233	Loterías y rifas ilícitas
+235	Malversación
+236	Manipulación de información
+238	Modificaciones ilícitas de bienes culturales
+239	Modificación ilegal de armas de fuego
+240	Monopolio
+241	Motín de presos
+244	Negociaciones usurarias
+245	Nombramientos ilegales
+246	Obstaculización a la accion penal
+247	Obstrucción de justicia
+248	Obstrucción extorsiva de tránsito
+249	Ocultación de impedimento
+250	Omisión de auxilio
+251	Omisión de denuncia
+252	Parricidio
+253	Patrocinio infiel
+254	Peculado
+255	Peculado por sustracción
+256	Peculado por uso
+257	Peculado culposo
+258	Perjurio
+259	Perturbación de la posesión
+260	Plagio o secuestro
+261	Portación ilegal de armas blancas de uso exclusivo del ejército de guatemala o de las fuerzas de seguridad y orden público del Estado
+262	Intercepción o reproducción de comunicaciones
+263	Portación ilegal de armas de fuego bélicas o de uso exclusivo del ejército de Guatemala o de las fuerzas de seguridad y orden público del Estado
+264	Portación ilegal de armas de fuego de uso civil y/o deportivas
+265	Inutilización de defensas
+266	Portación ilegal de armas hechizas o de fabricación artesanal
+267	Portación ilegal de explosivos, armas químicas, biológicas, atómicas, trampas bélicas y armas experimentales
+268	Portación de arma de fuego en estado de embriaguez o bajo efectos de drogas, estupefacientes o barbitúricos
+269	Prestación ilegal de servicios de seguridad privada
+270	Actos hostiles
+271	Portación ostentosa de arma de fuego
+273	Posesión para el consumo
+275	Presentación de testigos falsos
+276	Prevaricato
+277	Prevaricato de arbitros
+278	Prevaricato culposo
+279	Producción de medicamentos falsificados, productos farmacéuticos falsificados, dispositivos médicos y material médico quirúrgico falsificado
+281	Profanación de sepulturas
+282	Prolongación de funciones públicas
+283	Promoción o estímulo a la drogadicción
+284	Promoción y fomento
+287	Proposición y conspiración
+288	Propagación de enfermedad
+289	Protección de la fauna (caza sin licencia)
+290	Publicación de ofensas
+291	Quiebra fraudulenta
+292	Rapto impropio (Derogado por la Ley de Violencia Sexual)
+293	Rapto propio (derogado por la ley de violencia sexual)
+294	Recolección, utilización y comercialización de productos forestal
+295	Registros prohibidos
+298	Reparación de armas de fuego no registradas
+299	Reproducción de instrucciones o programas de computación
+300	Resistencia
+301	Resistencia a la acción fiscalizadora de la administración tributaria
+302	Resoluciones violatorias a la constitución
+303	Responsabilidad de conductores
+304	Responsabilidad de otras personas
+305	Retardo malicioso
+306	Retención de información
+307	Reuniones y manifestaciones ilícitas
+308	Revelación de información confidencial o reservada
+309	Revelación de secreto profesional
+310	Revelación de secretos
+311	Robo
+312	Robo agravado
+313	Robo de equipo terminal movil
+314	Robo de fluidos
+315	Robo de uso
+316	Robo impropio
+317	Sedición
+318	Siembra y cultivo
+319	Simulación de delito
+320	Simulación de matrimonio
+321	Sometimiento a servidumbre
+324	Supresión, ocultación o destrucción de documentos
+325	Sustitución de un niño por otro
+326	Sustracción agravada
+327	Sustracción impropia
+328	Sustracción propia
+329	Sustracción, desvío o supresión de correspondencia
+330	Tala de árboles de especies protegidas
+331	Tenencia ilegal de armas de fuego artesanales o hechizas, armas con número de registro alterado, armas con número borrado o no legalmente marcadas por la DIGECAM
+332	Tenencia ilegal de municiones
+333	Tenencia o portación de arma de fuego con número de registro alterado, borrado o no legalmente marcada por la DIGECAM
+334	Tentativa y aborto culposo
+335	Tenencia de armería ilegal
+336	Tenencia ilegal de armas de fuego bélicas o de uso exclusivo del Ejército de Guatemala o de las fuerzas de seguridad y orden público del Estado, explosivos, armas químicas, biológicas, atómicas, trampas bélicas y armas experimentales.
+337	Tenencia ilegal de armas de fuego ofensivas, explosivos, armas químicas, biológicas, atómicas (Derogado por el DTO. 15-2009)
+338	Tenencia ilegal de municiones para armas de fuego (Derogado por el DTO. 15-2009)
+339	Tenencia de instrumentos de falsificación
+340	Terrorismo 
+341	Testaferrato
+342	Tráfico de influencias
+343	Tráfico de tesoros nacionales
+344	Tráfico ilegal de flora y fauna
+345	Tráfico ilícito de armas de fuego o municiones
+346	Tráfico ilegal de fármacos, drogas o estupefacientes
+347	Tránsito internacional
+348	Tránsito ilegal de personas
+349	Transporte y/o traslado ilegal de armas de fuego
+350	Colocación o venta ilícita de seguros
+351	Transporte y/o traslado ilegal de municiones
+352	Transporte de ilegales
+354	Sustracción de las armas incautadas o sujetas a comiso
+355	Destrucción de materias primas o productos agrícolas o industrial
+356	Tortura
+357	Turbación de actos de culto
+358	Uso de documentos falsificados
+359	Uso de equipos terminales móviles en centros de privación de libertad
+360	Uso de equipos terminales móviles por funcionarios y empleados públicos
+361	Uso de información
+362	Uso ilegítimo de documento de identidad
+363	Uso indebido de uniforme e insignias
+364	Uso público de nombre supuesto
+365	Uso de sellos y otros efectos inutilizados
+367	Usura
+368	Usurpación
+369	Usurpación a áreas protegidas
+370	Usurpación agravada
+371	Usurpación de aguas
+372	Usurpación de atribuciones
+373	Usurpación de calidad
+375	Usurpación de funciones
+376	Propagación de enfermedad en plantas o animales
+377	Venta ilegal de armas de fuego
+378	Pacto colusorio en las adquisiciones públicas
+380	Violación a las medidas de protección de bienes culturales
+381	Violación a derechos de autor y derechos conexos
+382	Violación a derechos de propiedad industrial
+383	Violación a la constitución
+385	Violación a los derechos marcarios
+388	Violación de sellos
+389	Falsedad de despachos telegráficos, radiográficos o cablegráficos
+392	Violación de correspondencia y papeles privados
+394	Abuso con propósito electoral
+395	Abuso de autoridad con propósito electoral
+397	Alteración de moneda
+398	Alteración de programas
+399	Instigación a la violación de deberes
+400	Atentado contra el transporte de material electoral
+401	Atentados contra la integridad e independencia del estado
+402	Coacción contra elecciones
+403	Coacción del elector
+404	Cobro ilegal de comisiones
+405	Cohecho pasivo transnacional
+406	Contratación de ilegales
+408	Representación ilegal
+409	Delitos contra los deberes de humanidad
+410	Denegación de auxilio
+411	Depósito ilegal de armas de fuego bélicas o de uso exclusivo del Ejército de Guatemala o de las fuerzas de seguridad y orden público del Estado, explosivos, armas químicas, biológicas, atómicas, trampas bélicas y armas experimentales
+412	Tenencia ilegal de máquina reacondicionadora de munición para armas de fuego
+413	Entrar o permanecer en el país haciendo uso de documentos falsos (ley de migr.112 b)
+414	Entrega indebida de arma
+415	Entrenamiento para actividades ilícitas
+416	Estafa mediante lesión
+417	Estupro mediante engaño (derogado por la ley de violencia sexual)
+418	Exacciones ilegales
+419	Falsificación de contraseñas y marcas
+420	Falta aduanera (ley contra la defraudación y el contrabando aduaneros art 6)
+421	Falta en la portación de arma de fuego con licencia vencida
+422	Faltas (ley de areas protegidas art. 81)
+423	Financiamiento electoral ilícito
+424	Fraude del votante
+425	Introducción de mercancías de contrabando
+426	Intrusión
+427	Militancia en agrupaciones ilegales
+428	Ocultamiento, retención y posesión ilícita de documentos que acredita la ciudadanía
+429	Pánico financiero
+430	Peligro de desastre ferroviario
+431	Promoción, propaganda, campaña o publicidad anticipada
+432	Inseminación fraudulenta
+433	Propaganda oficial ilegal
+434	Propaganda reeleccionaria
+435	Publicaciones y espectáculos obscenos
+436	Publicidad indebida
+437	Responsabilidad del funcionario
+438	Servicio ilegal
+439	Siembra y cultivo de plantas productoras de sustancias estupefacientes
+440	Soborno de arbitros, peritos u otras personas con función pública
+441	Suposición de muerte
+442	Tenencia ilegal de materiales de fabricación y/o reacondicionamiento de municiones para armas de fuego
+444	Tránsito ilícito de armas de fuego o municiones
+445	Turbación del acto eleccionario
+446	Uso indebido de nombre comercial
+447	Violación del secreto del voto
+448	De la fiscalización electoral de fondos
+449	Ingresar al país violando ley de migración y sus reglamentos
+450	Secuestro o incautación de armas
+451	Desastre marítimo, fluvial o aéreo
+452	Facilitación ilícita de permanencia
+453	Facilitación ilícita de trabajadores migrantes extranjeros
+454	Ley para el control de animales peligrosos
+455	Procuración de impunidad o evasión
+456	Programas destructivos
+457	Adulteración de medicamentos
+458	Otras formas de monopolio
+459	Exportación de madera en dimensiones prohibidas
+460	Autoimputación
+461	Desastres culposos
+462	Establecimientos o laboratorios clandestinos
+463	Fabricación ilegal de armas de fuego
+464	Construcción clandestina de polígonos de tiro
+465	Estafa por medio de tarjeta de crédito o débito
+466	Explotación ilegal de transporte urbano o extraurbano de personas
+467	Inobservancia de formalidades
+468	Intermediarios de seguros
+469	Inutilización y entorpecimiento de defensas
+470	Traición propia
+471	Ultraje a los símbolos nacionales
+472	Violación de inmunidades
+473	Delito de sustracción de las armas incautadas o sujetas a comiso
+474	Menoscabo a la cultura tradicional
+475	Abandono de servicio de transporte
+476	Caso de muerte
+477	Desaparación o muerte de la raptada
+478	Prohibición de la producción, compra, venta, importación, exportación, tránsito, utilización y posesión de minas antipersonales y de dispositivos antidetectores, o de partes de tales artefactos
+479	Adulterio
+480	Transacciones e inversiones ilícitas
+481	Exentos de la responsabilidad penal
+482	Producción de pornografía de personas menores de edad con circunstancias especiales de agravación
+483	Quiebra culpable
+484	Tránsito aduanero internacional
+485	Agravación específica
+486	Cohecho activo transnacional
+487	Estafa mediante destrucción de cosa propia
+488	Exportación ilícita de bienes culturales
+489	Hurto, robo y tráfico de bienes culturales
+490	Agravación electoral
+900	No es delito
+901	Otros

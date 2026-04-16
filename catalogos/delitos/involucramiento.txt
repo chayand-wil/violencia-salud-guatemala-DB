@@ -1,0 +1,23 @@
+1	Agresor
+2	Denunciado
+3	En contra
+4	Procesado
+5	Querellado
+6	Demandado
+7	Imputado
+8	Acusado
+9	Sindicado
+10	Condenado
+11	Adolescente en conflicto
+12	Adolescente en conflicto con la Ley Penal
+13	Incidente
+14	Victimario
+15	Interponente/sindicado
+16	Recurrido
+17	A favor
+18	Actor civil
+19	Agraviado
+20	Denunciante
+21	Querellante adhesivo
+22	Solicitante
+99	Ignorado

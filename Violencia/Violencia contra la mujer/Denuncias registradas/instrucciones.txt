@@ -1,0 +1,51 @@
+ubicacion(
+	id_municipio -- municipio
+	id_area_geografica -- area_geografica
+	ciudad
+	zona
+	direccion_referencia
+);
+
+persona(
+	Nombres
+	apellidos
+	fecha_nacimiento (edad random entre 20-30 anos)
+	cui 
+	sexo -- genero (femenino)
+	id_orientacion_sexual -- orientacion_sexual
+	grupo_etnico -- pueblo_pertenencia
+	estado_civil -- estado_civil (desconocido)
+	condicion_alfabetica -- condicion_alfabetica (desconocido)
+	nivel_escolaridad  -- nivel_escolaridad
+	id_origen -- ubicacion
+	es_extranjero (no)
+);
+hecho(
+	id_tipo_hecho -- tipo_hecho
+	id_ubicacion -- ubicacion
+	fecha_hecho
+);
+denuncia(
+	id_hecho -- hecho
+	fecha_denuncia
+	id_estado_denuncia -- estado_denuncia
+	id_entididad_denuncia -- institucion_organicacion
+);
+involucrado_hecho(
+	id_hecho -- hecho()
+	id_involucrado -- persona 
+	id_tipo_involucramiento - involucramiento (Denunciante)
+);
+hecho_delictivo( 
+	id_hecho -- hecho
+	id_delito -- delito_cometido (VCM)
+);
+
+
+Fecha(fecha_hecho(hecho), fecha_denuncia(denuncia))
+Municipio(id_origen -- ubicacion(persona), 	id_ubicacion -- ubicacion(hecho))
+Edad(fecha_nacimiento(persona))
+Escolaridad(nivel_escolaridad  -- nivel_escolaridad(persona))
+Pueblo de Pertenencia(grupo_etnico -- pueblo_pertenencia(persona))
+orientacion_sexual(	id_orientacion_sexual -- orientacion_sexual(persona))
+Estado Caso (id_estado_denuncia -- estado_denuncia)
