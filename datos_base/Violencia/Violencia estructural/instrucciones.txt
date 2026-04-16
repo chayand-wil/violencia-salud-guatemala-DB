@@ -1,0 +1,4 @@
+hecho(violencia_esctructural)
+persona
+violencia_estructural
+denuncia

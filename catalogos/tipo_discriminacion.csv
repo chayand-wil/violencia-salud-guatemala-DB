@@ -1,0 +1,13 @@
+id,nombre,descripcion,ambito,base_legal,ejemplo
+1,Étnica o racial,Por origen o etnia,Social / Laboral,Código Penal,Negar empleo por ser indígena
+2,Lingüística,Por idioma,Educación / Servicios,Código Penal,No atender en idioma maya
+3,De género,Por sexo o género,Laboral / Social,Código Penal,Pagar menos a mujeres
+4,Orientación sexual,Por preferencia sexual,Social / Laboral,Código Penal,Rechazo laboral por ser gay
+5,Socioeconómica,Por nivel económico,Social,Código Penal,Maltrato por apariencia
+6,Discapacidad,Por condición física o mental,Laboral / Servicios,Código Penal,No contratar por discapacidad
+7,Edad,Por edad,Laboral,Código Penal,Rechazo por ser mayor
+8,Religiosa,Por creencias,Social,Código Penal,Exclusión por religión
+9,Territorial,Por lugar de origen,Social,Código Penal,Discriminación rural
+10,Educativa,Por nivel académico,Laboral,Código Penal,Exigir título innecesario
+11,Cultural,Por tradiciones,Social,Código Penal,Burlas por vestimenta
+12,Institucional,Desde instituciones,Público,Código Penal,Falta de servicios inclusivos

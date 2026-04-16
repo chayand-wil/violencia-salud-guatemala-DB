@@ -1,0 +1,10 @@
+Departamento
+Municipio
+DESPACHO
+Año(dia - mes (random))
+Valor(cantidad de registros)
+
+
+hecho
+medida_seguridad
+institucion_organicacion

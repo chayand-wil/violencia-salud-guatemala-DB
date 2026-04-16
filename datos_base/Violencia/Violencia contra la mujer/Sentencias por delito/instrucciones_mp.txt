@@ -1,0 +1,6 @@
+Fecha
+Indicador(tipo_sentencia)
+Valor(cantidad de registros)
+
+sentencia
+sentencia_hecho

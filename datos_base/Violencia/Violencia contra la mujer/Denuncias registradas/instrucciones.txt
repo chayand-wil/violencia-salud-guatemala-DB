@@ -32,7 +32,7 @@ denuncia(
 	id_entididad_denuncia -- institucion_organicacion
 );
 involucrado_hecho(
-	id_hecho -- hecho()
+	id_hecho -- hecho
 	id_involucrado -- persona 
 	id_tipo_involucramiento - involucramiento (Denunciante)
 );

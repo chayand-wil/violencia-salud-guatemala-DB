@@ -1,0 +1,27 @@
+-- Indicadores Sociales y Sanitarios de Guatemala
+
+
+Guatemala enfrenta una compleja realidad nacional donde la violencia y la salud pública se entrelazan como dos de las problemáticas más críticas que afectan a su población. La violencia, en sus múltiples manifestaciones: delictiva, intrafamiliar, estructural, contra la mujer y la niñez; encuentra sus raíces en factores socioeconómicos, educativos y culturales que también condicionan el estado de salud de las comunidades. Por su parte, los indicadores sanitarios como la desnutrición, las enfermedades crónicas, las enfermedades transmitidas por vectores y la morbilidad materna infantil reflejan las profundas desigualdades territoriales y sociales del país.
+Ante esta realidad, se solicita realizar un mapeo de base de datos sobre este sistema integral, que permita relacionar indicadores de violencia con indicadores de salud pública a nivel departamental y municipal. 
+
+
+Objetivo general
+Diseñar e implementar una base de datos completamente normalizada que integre indicadores de violencia e indicadores de salud pública de Guatemala, permitiendo consultas analíticas que revelen relaciones entre ambas dimensiones de la realidad nacional.
+
+
+Eje 2 — Salud Pública
+Desnutrición: Se cuenta con datos de desnutrición aguda y retardo en el desarrollo, desagregados por departamento, municipio, grupo etario, sexo y año 2012–2024.
+Enfermedades crónicas: Se dispone de registros de enfermedades crónicas por diagnóstico CIE-10, desagregados por departamento, municipio, grupo etario, sexo y año 2020–2024.
+Enfermedades transmitidas por vectores: Se cuenta con registros de dengue, dengue grave, malaria, Chagas, Zika y Chikungunya, desagregados por departamento, municipio, grupo etario, sexo y año 2012–2024.
+Morbilidad materna infantil: Se dispone de registros de morbilidad del grupo materno infantil, entendida como las complicaciones durante el embarazo, parto y puerperio que ponen en riesgo la vida de la mujer.
+Factores a consideración
+Como factores de interés transversales a ambos ejes, se deberá contemplar el registro de tener en cuenta registros de denuncias o encuestas, nivel de escolaridad, nivel socioeconómico, idioma, cantidad de personas en el hogar, condición laboral y tipo de empleo de las personas involucradas en los distintos registros. Estos factores permitirán enriquecer los análisis relacionales entre violencia y salud.
+Todos estos sistemas detallados anteriormente, servirán para estructurar un sistema de violencia/salud en nuestro país, recuerde que mucha de esta información vendrá en los archivos, sin embargo, para la relación de registros transaccionales, será necesario que usted invente una serie de registros, esto para hacer realista la propuesta, pese a que no se tengan los datos que relacionen directamente cada uno de estos sistemas. Puede usar la Herramienta de Faker para la generación de datos sobre las personas, tratando la manera de que el sistema sea lo más realista posible.
+
+
+
+Referencias de librerias recomendadas
+https://pandas.pydata.org/
+https://selenium-python.readthedocs.io/
+https://pypi.org/project/beautifulsoup4/
+https://pypi.org/project/Faker/

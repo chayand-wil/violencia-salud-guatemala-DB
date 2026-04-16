@@ -42,6 +42,16 @@ profesion(
 	nombre
 	descripcion
 );
+tipo_fallo(
+	nombre
+	descripcion
+);
+
+tipo_discriminacion(
+	nombre
+	descripcion
+);
+
 clasificacion_ocupacion(
 	codigo
 	nombre
@@ -76,6 +86,11 @@ tipo_hecho(
 	descripcion
 );
 tipo_institucion(
+	nombre
+	descripcion
+);
+
+tipo_sentencia(
 	nombre
 	descripcion
 );
@@ -214,9 +229,12 @@ necropsia(
 
 sentencia(
 	fecha_sentencia
+	id_institucion_organicacion -- institucion_organicacion
 	id_persona -- persona
-	tipo_fallo
+	id_tipo_fallo -- tipo_fallo
+	id_delito -- delito
 	id_involucramiento -- involucramiento
+	id_tipo_sentencia -- tipo_sentencia
 );
 
 sentencia_hecho(
@@ -248,15 +266,9 @@ denuncia_registrada_vcm(
 );
 
 estado_caso(
-
+	nombre
+	descripcion
 );
-
-caso_feminicidio(
-	id_hecho -- hecho
-	id_estado_caso -- estado_caso
-	
-);
-
 
 caso_mp(
 	id_estado_caso -- estado_caso
@@ -268,18 +280,17 @@ medida_seguridad(
 	id_institucion_organicacion -- institucion_organicacion
 );
 
-sentencia_oj(
-	id_sentencia -- sentencia
-	despacho
-	valor
+discriminacion_estructural(
+	id_hecho -- hecho
+	id_victima -- persona
+	id_tipo_discriminacion -- tipo_discriminacion
 );
+ 
 
 
-sentencia_mp(
-	id_sentencia -- sentencia
-	indicador
-	valor
-);
+
+
+
 
 
 
@@ -288,10 +299,6 @@ tipo_agresion_ninez(
 	descripcion
 );
 
-tipo_discriminacion(
-	nombre
-	descripcion
-);
 
 queja_agresion_ninez(
 	id_departamento_registro -- departamento
@@ -299,16 +306,16 @@ queja_agresion_ninez(
 	valor
 );
 
-caso_discriminacion_estructural(
-	id_hecho -- hecho
-	id_victima -- persona
-	id_tipo_discriminacion -- tipo_discriminacion
-);
+
+
+
+
 
 tipo_agresion_intrafamiliar(
 	nombre
 	descripcion
 );
+
 tipo_medida_seguridad(
 	nombre
 	descripcion
@@ -335,7 +342,7 @@ caso_violencia_intrafamiliar(
 	organismo_jurisdiccional
 	conducente
 	ley_aplicable
-	organismo_remite
+	id_institucion_organicacion -- institucion_organicacion
 );
 
 caso_vif_articulo_legal(
@@ -347,6 +354,13 @@ caso_vif_medida_seguridad(
 	id_caso_violencia_intrafamiliar -- caso_violencia_intrafamiliar
 	id_tipo_medida_seguridad -- tipo_medida_seguridad
 );
+
+
+
+
+
+
+
 
 fuente_salud(
 	nombre

@@ -1,0 +1,6 @@
+DEPARTAMENTO	
+DESPACHO(institucion_organicacion)
+DELITO	
+TIPO FALLO	
+Valor(cantidad de registros)
+Mes	Año(fecha)
