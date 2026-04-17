@@ -49,6 +49,11 @@ Instrucciones del proyecto para generacion, extraccion y carga de datos.
 - Los delitos pueden venir clasificados distinto en PNC, MP y OJ.
 - Conservar el dato original de la fuente y homologarlo a una tabla o catalogo comun del modelo.
 
+### Regla Territorial desde Catalogo de Municipios
+
+- En catalogos/municipios/municipios- depto.txt, el prefijo numerico del codigo de municipio determina su departamento (ejemplo: 1601 pertenece al departamento 16).
+- Para fuentes con solo departamento, usar como municipio por defecto la primera cabecera disponible del departamento segun ese catalogo (generalmente xx01).
+
 ## Reglas Especificas por Fuente: Denuncias MP (VCM)
 
 - Para archivos de Denuncias registradas del MP, seguir este flujo de carga: ubicacion -> persona -> hecho -> denuncia -> involucrado_hecho -> hecho_delictivo.
@@ -81,7 +86,7 @@ Instrucciones del proyecto para generacion, extraccion y carga de datos.
 ### Estado Operativo de Referencia
 
 - La tabla tipo_falta ya tiene carga de catalogo.
-- La tabla falta (transaccional) no debe asumirse cargada hasta ejecutar un archivo fuente transaccional de faltas judiciales.
+- La tabla falta (transaccional) ya cuenta con carga inicial del archivo fuente 20240524231759eHmz6DmFKboNQ5Y3OlqNkbi9izmXULaP.xlsx (batch 101).
 - El involucramiento recomendado para faltas judiciales es Infractor (si la fuente no indica otro rol especifico).
 
 ### Entregables Obligatorios
@@ -90,11 +95,42 @@ Instrucciones del proyecto para generacion, extraccion y carga de datos.
 - Organizar catalogos en sql/inserts/catalogos y transaccionales en sql/inserts/transaccional.
 - Para lotes grandes, dividir en batches numerados por fuente (ejemplo: 100_, 101_, 102_).
 
-### Orden de Insercion para Retomar
+### Orden de Insercion para Retomar (Con Carpeta/Archivo)
 
-- 1) Catalogos base y geografia.
-- 2) Catalogos de delitos y homologacion entre fuentes.
-- 3) Carga transaccional por archivo fuente siguiendo su flujo de modelo.
-- 4) Al terminar cada archivo: validacion de conteos y registro de tablas afectadas.
+- [x] catalogos/tipo_fall.txt
+- [x] catalogos/tipo_hechos.txt
+- [x] catalogos/tipo_discriminacion.csv
+- [x] catalogos/delitos/involucramiento.txt
+- [x] catalogos/ley-titulo-capitulo.txt
+- [x] catalogos/delitos/causas_pnc.txt
+- [x] catalogos/delitos/causas_victimas_pnc.txt
+- [x] catalogos/delitos/agraviados-sindicados.txt
+- [x] catalogos/delitos/oj.txt
+- [x] catalogos/municipios/municipios- depto
+- [x] datos_base/Violencia/Faltas judiciales/Diccionario/20240524231842pWf6BcBWj8taVS3Q3mRKxgDsvwPejgH8.xlsx (solo catalogos derivados)
+- [x] datos_base/Violencia/Violencia contra la mujer/Denuncias registradas/Denuncias del MP por el delito de VCM.xlsx (batch transaccional inicial)
+- [x] datos_base/Violencia/Faltas judiciales/20240524231759eHmz6DmFKboNQ5Y3OlqNkbi9izmXULaP.xlsx (batch transaccional 101)
+- [x] datos_base/Violencia/Violencia contra la mujer/Hechos delictivos/Hechos delictivos contra mujeres de 2008 al 2024.xlsx (batch transaccional 102)
+- [x] datos_base/Violencia/Violencia contra la mujer/Medidas de seguridad/Medidas de Seguridad 2012-2024.xlsx (batch transaccional 103)
+- [x] datos_base/Violencia/Violencia contra la mujer/Sentencias por delito/Sentencias del Ministerio Publico por el delito de Violencia Contra la Mujer.xlsx (batch transaccional 104)
+- [x] datos_base/Violencia/Violencia contra la mujer/Sentencias por delito/SENTENCIAS DEL Organismo Judicial POR EL DELITO DE Violencia contra la mujerCM 2008-2024.xlsx (batch transaccional 105)
+- [ ] datos_base/Violencia/Violencia contra la mujer/Atencion brindada/Atenciones brindades por el Instituto de la Víctima 2020-2023(1).xlsx
+- [ ] datos_base/Violencia/Violencia estructural/CASOS DISCRIMINACIÓN 2016-2023.xls
+- [ ] datos_base/Violencia/Hechos-Delicitivos/PNC - Detenciados/detenidos.xlsx
+- [ ] datos_base/Violencia/Hechos-Delicitivos/PNC -Victimas/pnc_victimas.xlsx
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Sindicatos/sindicados.xlsx
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Necropsias/necropsias.xlsx
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Exhumaciones/exhumaciones.xlsx
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Evaluacion Medicos - INACIF/medicos_inacif.xlsx
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Organismo judical - Sentenciados/sentenciados.xlsx
+- [ ] datos_base/Violencia/Violencia contra la ninez/Quejas Mineduc/20240719123138C8M6SpIQkU1dO569us4WzmhiEojxPhwf.xlsx
+- [ ] datos_base/Violencia/Violencia intrafamiliar/2023/Diccionario/2024052300613QDinUvuRa9GjopyXaTuNMXc3gd6Jq1Q1.xlsx
+
+### Validaciones Minimas por Paso
+
+- Al terminar cada archivo, registrar conteos de tablas afectadas (antes/despues).
+- Confirmar si el archivo fue carga de catalogo o transaccional.
+- Si un archivo solo alimenta catalogos, marcarlo explicitamente como "solo catalogos".
 
 

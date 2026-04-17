@@ -1,0 +1,1038 @@
+SET NAMES UTF8;
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO CUARTO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO CUARTO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE  PRIMERA INSTANCIA PENAL,  NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SAN MARCOS, SAN MARCOS', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE  PRIMERA INSTANCIA PENAL,  NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SAN MARCOS, SAN MARCOS')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA CIVIL Y ECONÓMICO COACTIVO, CHIQUIMULA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA CIVIL Y ECONÓMICO COACTIVO, CHIQUIMULA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE PETÉN', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE PETÉN')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA IXCHIGUÁN, SAN MARCOS', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA IXCHIGUÁN, SAN MARCOS')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO  DE ESCUINT', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO  DE ESCUINT')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE ALTA VER', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE ALTA VER')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE CHIMALTE', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE CHIMALTE')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE CHIQUIMU', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE CHIQUIMU')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE GUATEMAL', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE GUATEMAL')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE IZABAL', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE IZABAL')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE JUTIAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE JUTIAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE QUICHE', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE QUICHE')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE SANTA RO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE SANTA RO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE ZACAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE ZACAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE SAN MAR', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE SAN MAR')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE SOLOLA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE SOLOLA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DEVIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, SUCHITEPÉQUEZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DEVIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, SUCHITEPÉQUEZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DEL MUNICIPIO DE MALACATÁN, DEPARTAMENTO DE SAN MARCOS', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DEL MUNICIPIO DE MALACATÁN, DEPARTAMENTO DE SAN MARCOS')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL Y DE NARCOACTIVIDAD DEL DEPARTAMENTO DE PETÉN', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL Y DE NARCOACTIVIDAD DEL DEPARTAMENTO DE PETÉN')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD DE TURNO DE CHIQUIMULA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD DE TURNO DE CHIQUIMULA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE 24 HORAS , SACATEPÉQUEZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE 24 HORAS , SACATEPÉQUEZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE 24 HORAS,  MIXCO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE 24 HORAS,  MIXCO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE 24 HORAS, ESCUINTLA, ESCUINTLA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE 24 HORAS, ESCUINTLA, ESCUINTLA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DE 24 HORAS, VILLA NUEVA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DE 24 HORAS, VILLA NUEVA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE SOLOLÁ, SOLOLÁ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE SOLOLÁ, SOLOLÁ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, CHIMALTENANGO, CHIMALTENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, CHIMALTENANGO, CHIMALTENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, COATEPEQUE, QUETZALTENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, COATEPEQUE, QUETZALTENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, HUEHUETENANGO, HUEHUETENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, HUEHUETENANGO, HUEHUETENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, JALAPA, JALAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, JALAPA, JALAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SANTA CRUZ DEL QUICHÉ, QUICHÉ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SANTA CRUZ DEL QUICHÉ, QUICHÉ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SANTA LUCÍA COTZUMALGUAPA, ESCUINTLA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SANTA LUCÍA COTZUMALGUAPA, ESCUINTLA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SUCHITEPÉQUEZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SUCHITEPÉQUEZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, TOTONICAPÁN', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, TOTONICAPÁN')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD, ZACAPA, ZACAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD, ZACAPA, ZACAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DE PRIMERA INSTANCIA, SANTA MARÍA NEBAJ, QUICHÉ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DE PRIMERA INSTANCIA, SANTA MARÍA NEBAJ, QUICHÉ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO DÉCIMO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO DÉCIMO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO NOVENO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO NOVENO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO OCTAVO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO OCTAVO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA  INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DEL DEPARTAMENTO DE SANTA ROSA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA  INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DEL DEPARTAMENTO DE SANTA ROSA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA DEL MUNICIPIO DE SANTIAGO ATITLAN', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA DEL MUNICIPIO DE SANTIAGO ATITLAN')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA MIXTO,  LA DEMOCRACIA, HUEHUETENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA MIXTO,  LA DEMOCRACIA, HUEHUETENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL DE DELITOS DE EXTORSIÓN DEL DEPARTAMENTO DE GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL DE DELITOS DE EXTORSIÓN DEL DEPARTAMENTO DE GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMEN', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMEN')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL Y NARCOACTIVIDAD DEL DEPARTAMENTO DE JUTIAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL Y NARCOACTIVIDAD DEL DEPARTAMENTO DE JUTIAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DE TURNO, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DE TURNO, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, PUERTO BARRIOS, IZABAL', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, PUERTO BARRIOS, IZABAL')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA, SANTA EULALIA, HUEHUETENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PLURIPERSONAL DE PRIMERA INSTANCIA, SANTA EULALIA, HUEHUETENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PRIMERO DE  PRIMERA INSTANCIA PENAL, Y DE NARCOACTIVIDAD, COBAN, ALTA VERAPAZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PRIMERO DE  PRIMERA INSTANCIA PENAL, Y DE NARCOACTIVIDAD, COBAN, ALTA VERAPAZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PRIMERO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE CON COMPETENCIA PARA CONOCER PROCESOS DE MAYOR RIESGO, GRUPO C', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PRIMERO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE CON COMPETENCIA PARA CONOCER PROCESOS DE MAYOR RIESGO, GRUPO C')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO PRIMERO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DE MAYOR RIESGO, GRUPO A', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO PRIMERO DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DE MAYOR RIESGO, GRUPO A')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO QUINTO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO QUINTO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO SEGUNDO DE PRIMERA INSTANCIA PENAL, Y DE NARCOACTIVIDAD, COBAN ALTA VERAPAZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO SEGUNDO DE PRIMERA INSTANCIA PENAL, Y DE NARCOACTIVIDAD, COBAN ALTA VERAPAZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO SEGUNDO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO SEGUNDO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO SEPTIMO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO SEPTIMO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO SEXTO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO SEXTO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'JUZGADO TERCERO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('JUZGADO TERCERO PLURIPERSONAL DE PRIMERA INSTANCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL CUARTO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL CUARTO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA  SOLOLÁ, SOLOLÁ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA  SOLOLÁ, SOLOLÁ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL CON COMPETENCIA ESPECIALIZADA EN DELITOS DE TRATA DE PERSONAS DEL DEPARTAMENTO DE GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL CON COMPETENCIA ESPECIALIZADA EN DELITOS DE TRATA DE PERSONAS DEL DEPARTAMENTO DE GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE EXTORSION DEL DEPARTAMENTO DE GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE EXTORSION DEL DEPARTAMENTO DE GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE ALTA VERAPAZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE ALTA VERAPAZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE CHIMALTENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE CHIMALTENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE CHIQUIMULA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE CHIQUIMULA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE HUEHUETENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE HUEHUETENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE JUTIAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE JUTIAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE PETÉN', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE PETÉN')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE QUICHE', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE QUICHE')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE SAN MARCOS', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE SAN MARCOS')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE ZACAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE ZACAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE ESCUINTLA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE ESCUINTLA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE SOLOLA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, DEL DEPARTAMENTO DE SOLOLA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL,DEL DEPARTAMENTO  DE IZABAL', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL,DEL DEPARTAMENTO  DE IZABAL')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DEVIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, SUCHITEPÉQUEZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DEVIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL, SUCHITEPÉQUEZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, HUEHUETENANGO, HUEHUETENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, HUEHUETENANGO, HUEHUETENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL Y NARCOACTIVIDAD DEL DEPARTAMENTO DE CHIQUIMULA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL Y NARCOACTIVIDAD DEL DEPARTAMENTO DE CHIQUIMULA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL, DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE BAJA VERAPAZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL, DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE BAJA VERAPAZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL, DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE SANTA ROSA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL, DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL DEL DEPARTAMENTO DE SANTA ROSA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL, NARCO ACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SUCHITEPÉQUEZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL, NARCO ACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, SUCHITEPÉQUEZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DEL DEPARTAMENTO DE SANTA ROSA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE DEL DEPARTAMENTO DE SANTA ROSA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE EN PROCESOS DE MAYOR RIESGO DE QUETZALTENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE EN PROCESOS DE MAYOR RIESGO DE QUETZALTENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, CHIMALTENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, CHIMALTENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA,  ESCUINTLA, ESCUINTLA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA,  ESCUINTLA, ESCUINTLA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, ANTIGUA GUATEMALA,  SACATEPÉQUEZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, ANTIGUA GUATEMALA,  SACATEPÉQUEZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, COATEPEQUE, QUETZALTENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, COATEPEQUE, QUETZALTENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, GUASTATOYA, EL PROGRESO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, GUASTATOYA, EL PROGRESO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, JALAPA, JALAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, JALAPA, JALAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, PUERTO BARRIOS, IZABAL', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, PUERTO BARRIOS, IZABAL')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, SALAMÁ, BAJA VERAPAZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, SALAMÁ, BAJA VERAPAZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, SAN BENITO, PETÉN', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, SAN BENITO, PETÉN')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, SAN MARCOS, SAN MARCOS', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, SAN MARCOS, SAN MARCOS')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DE SENTENCIA, SANTA LUCÍA COTZUMALGUAPA, ESCUINTLA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DE SENTENCIA, SANTA LUCÍA COTZUMALGUAPA, ESCUINTLA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL DÉCIMO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL DÉCIMO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL NOVENO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL NOVENO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL OCTAVO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL OCTAVO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA PENAL NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, COBÁN, ALTA VERAPAZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA PENAL NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, COBÁN, ALTA VERAPAZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA PENAL Y NARCOACTIVIDAD DEL DEPARTAMENTO DE JUTIAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA PENAL Y NARCOACTIVIDAD DEL DEPARTAMENTO DE JUTIAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE PARA CONOCER PROCESOS DE MAYOR RIESGO, GRUPO E', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE PARA CONOCER PROCESOS DE MAYOR RIESGO, GRUPO E')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA GRUPO A', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA GRUPO A')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA GRUPO B', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA GRUPO B')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA GRUPO C', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA GRUPO C')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA GRUPO D', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA GRUPO D')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, QUETZALTENANGO', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, QUETZALTENANGO')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA, MIXCO, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA, MIXCO, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL PRIMERO DE SENTENCIA, VILLA NUEVA, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL PRIMERO DE SENTENCIA, VILLA NUEVA, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL QUINTO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL QUINTO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL SEGUNDO DE SENTENCIA PENAL NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, COBÁN, ALTA VERAPAZ', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL SEGUNDO DE SENTENCIA PENAL NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, COBÁN, ALTA VERAPAZ')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL SEGUNDO DE SENTENCIA PENAL, NARCOACTIVIDAD DEL DEPARTAMENTO DE JUTIAPA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL SEGUNDO DE SENTENCIA PENAL, NARCOACTIVIDAD DEL DEPARTAMENTO DE JUTIAPA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL SEGUNDO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL SEGUNDO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL SEGUNDO DE SENTENCIA, CHIQUIMULA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL SEGUNDO DE SENTENCIA, CHIQUIMULA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL SEGUNDO PLURIPERSONAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL,DEL DEPARTAME', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL SEGUNDO PLURIPERSONAL DE SENTENCIA PENAL DE DELITOS DE FEMICIDIO Y OTRAS FORMAS DE VIOLENCIA CONTRA LA MUJER Y VIOLENCIA SEXUAL,DEL DEPARTAME')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL SEXTO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL SEXTO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL SÉPTIMO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL SÉPTIMO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL TERCERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL TERCERO DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+INSERT INTO institucion_organicacion (nombre_institucion, id_tipo_institucion)
+SELECT 'TRIBUNAL UNDÉCIMO  DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA', ti.id_tipo_institucion
+FROM tipo_institucion ti
+WHERE UPPER(TRIM(ti.nombre)) = UPPER('Organismo Judicial')
+  AND NOT EXISTS (
+    SELECT 1 FROM institucion_organicacion io
+    WHERE UPPER(TRIM(io.nombre_institucion)) = UPPER('TRIBUNAL UNDÉCIMO  DE SENTENCIA PENAL, NARCOACTIVIDAD Y DELITOS CONTRA EL AMBIENTE, GUATEMALA')
+  );
+
+COMMIT;
