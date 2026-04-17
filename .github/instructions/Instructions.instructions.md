@@ -114,18 +114,21 @@ Instrucciones del proyecto para generacion, extraccion y carga de datos.
 - [x] datos_base/Violencia/Violencia contra la mujer/Medidas de seguridad/Medidas de Seguridad 2012-2024.xlsx (batch transaccional 103)
 - [x] datos_base/Violencia/Violencia contra la mujer/Sentencias por delito/Sentencias del Ministerio Publico por el delito de Violencia Contra la Mujer.xlsx (batch transaccional 104)
 - [x] datos_base/Violencia/Violencia contra la mujer/Sentencias por delito/SENTENCIAS DEL Organismo Judicial POR EL DELITO DE Violencia contra la mujerCM 2008-2024.xlsx (batch transaccional 105)
-- [ ] datos_base/Violencia/Violencia contra la mujer/Atencion brindada/Atenciones brindades por el Instituto de la Víctima 2020-2023(1).xlsx
-- [ ] datos_base/Violencia/Violencia estructural/CASOS DISCRIMINACIÓN 2016-2023.xls
-- [ ] datos_base/Violencia/Hechos-Delicitivos/PNC - Detenciados/detenidos.xlsx
-- [ ] datos_base/Violencia/Hechos-Delicitivos/PNC -Victimas/pnc_victimas.xlsx
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Sindicatos/sindicados.xlsx
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Necropsias/necropsias.xlsx
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Exhumaciones/exhumaciones.xlsx
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Evaluacion Medicos - INACIF/medicos_inacif.xlsx
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Organismo judical - Sentenciados/sentenciados.xlsx
-- [ ] datos_base/Violencia/Violencia contra la ninez/Quejas Mineduc/20240719123138C8M6SpIQkU1dO569us4WzmhiEojxPhwf.xlsx
-- [ ] datos_base/Violencia/Violencia intrafamiliar/2023/Diccionario/2024052300613QDinUvuRa9GjopyXaTuNMXc3gd6Jq1Q1.xlsx
+- [x] datos_base/Violencia/Violencia contra la mujer/Atencion brindada/Atenciones brindades por el Instituto de la Víctima 2020-2023(1).xlsx (batch transaccional 106)
+- [x] datos_base/Violencia/Violencia estructural/CASOS DISCRIMINACIÓN 2016-2023.xls (batch transaccional 107)
+- [x] datos_base/Violencia/Hechos-Delicitivos/PNC - Detenciados/detenidos.xlsx (batch transaccional 108)
+- [ ] datos_base/Violencia/Hechos-Delicitivos/PNC -Victimas/pnc_victimas.xlsx (batch 109 parcial cargado: filas 1-15000; pendiente 15001-39968)
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx (batch 110 parcial cargado: filas 1-1000; pendiente 1001-444513)
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Sindicatos/sindicados.xlsx (batch 111 parcial cargado: filas 1-1000; pendiente 1001-362321)
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Necropsias/necropsias.xlsx (batch 112 parcial cargado: filas 1-1000; pendiente 1001-11038)
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Exhumaciones/exhumaciones.xlsx (batch 113 parcial cargado: filas 1-60; pendiente 61-118)
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Evaluacion Medicos - INACIF/medicos_inacif.xlsx (batch 114 parcial cargado: filas 1-1000; pendiente 1001-148537)
+- [ ] datos_base/Violencia/Hechos-Delicitivos/Organismo judical - Sentenciados/sentenciados.xlsx (batch 115 parcial cargado: filas 1-1000; pendiente 1001-59812)
+- [ ] datos_base/Violencia/Violencia contra la ninez/Quejas Mineduc/20240719123138C8M6SpIQkU1dO569us4WzmhiEojxPhwf.xlsx (batch 117 parcial cargado: 250 eventos sinteticos; pendiente completar departamentos y volumen)
+- [ ] datos_base/Violencia/Violencia intrafamiliar/2023/Diccionario/2024052300613QDinUvuRa9GjopyXaTuNMXc3gd6Jq1Q1.xlsx (diccionario VIF 2023, analizado: referencia de codigos/etiquetas, sin carga transaccional directa)
+- [ ] datos_base/Violencia/Violencia intrafamiliar/2023/violencia_intrafamiliar.xlsx (batch 116 parcial cargado: filas 1-500; pendiente 501-37348)
+- [ ] datos_base/Violencia/Violencia intrafamiliar/2024/diccionario-de-variables-violencia-intrafamiliar.xlsx (diccionario VIF 2024, analizado: referencia de codigos/etiquetas, sin carga transaccional directa)
+- [ ] datos_base/Violencia/Violencia intrafamiliar/2024/base-de-datos-violencia-intrafamiliar-ano-2024_v3.xlsx (batch 118 parcial cargado: filas 1-500; pendiente 501-36609)
 
 ### Validaciones Minimas por Paso
 

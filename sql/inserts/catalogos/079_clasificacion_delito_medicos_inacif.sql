@@ -1,0 +1,17 @@
+SET NAMES UTF8;
+
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Aborto', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Aborto'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Determinación de uso de drogas, fármacos o estupefacientes', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Determinación de uso de drogas, fármacos o estupefacientes'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Edad cronológica', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Edad cronológica'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Embarazo', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Embarazo'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Embriaguez', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Embriaguez'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Enfermedad común', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Enfermedad común'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Herida por arma blanca', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Herida por arma blanca'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Herida por arma de fuego', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Herida por arma de fuego'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Intoxicación', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Intoxicación'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Lesiones', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Lesiones'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Otros', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Otros'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Reconocimiento médico para determinar estado de salud', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Reconocimiento médico para determinar estado de salud'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Toma de muestras', 'Fuente Medicos INACIF 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Toma de muestras'));
+
+COMMIT;

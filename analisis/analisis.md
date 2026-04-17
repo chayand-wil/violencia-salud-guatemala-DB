@@ -52,12 +52,7 @@ tipo_discriminacion(
 	descripcion
 );
 
-clasificacion_ocupacion(
-	codigo
-	nombre
-	nivel_clasificacion
-	descripcion
-); 
+ 
 nivel_escolaridad(
 	nombre
 	orden
@@ -127,12 +122,12 @@ delito_cometido(
 ocupacion(
 	nombre_ocupacion
 	descripcion
+	id_ocupacion_clasificacion -- ocupacion_clasificacion
 );
 
 ocupacion_clasificacion(
-	id_ocupacion -- ocupacion
-	id_clasificacion_ocupacion -- clasificacion_ocupacion
-	observaciones
+    nombre_clasificacion
+    observaciones
 );
 
 persona_ocupacion(

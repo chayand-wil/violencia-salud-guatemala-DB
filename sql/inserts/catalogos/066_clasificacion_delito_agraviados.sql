@@ -1,0 +1,18 @@
+SET NAMES UTF8;
+
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Amenazas', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Amenazas'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Coacción', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Coacción'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Extorsión', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Extorsión'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Homicidio', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Homicidio'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Homicidio culposo', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Homicidio culposo'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Hurto', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Hurto'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Hurto agravado', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Hurto agravado'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Lesiones culposas', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Lesiones culposas'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Lesiones leves', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Lesiones leves'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Lesión en riña', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Lesión en riña'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Otros', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Otros'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Robo', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Robo'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Robo agravado', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Robo agravado'));
+INSERT INTO clasificacion_delito (codigo, nombre, descripcion, activo) SELECT NULL, 'Robo de equipo terminal movil', 'Fuente Agraviados 2023', 1 FROM RDB$DATABASE WHERE NOT EXISTS (SELECT 1 FROM clasificacion_delito WHERE UPPER(TRIM(nombre)) = UPPER('Robo de equipo terminal movil'));
+
+COMMIT;
