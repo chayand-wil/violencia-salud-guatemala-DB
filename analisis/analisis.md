@@ -234,15 +234,17 @@ evaluacion_medica_inacif(
 	id_clasificacion_evaluacion -- clasificacion_evaluacion
 );
 
-exhumacion(
-	id_hecho -- hecho
+
+causa_muerte(
+	nombre 
+	descripcion
 );
 
 necropsia(
 	id_hecho -- hecho
 	id_persona -- persona
-	causa_muerte
-);
+	id_causa_muerte -- causa_muerte
+);	
 
 sentencia(
 	fecha_sentencia
@@ -429,9 +431,32 @@ caso_vif_hogar(
 
 
 
+tipo_diagnostico(
+	nombre
+	descripcion
+);
 
 
-fuente_salud(
+diagnostico(
+	nombre	
+	CIE-10
+	id_tipo_diagnostico -- tipo_diagnostico
+);
+
+ 
+ persona_diagnostico(
+	id_diagnostico -- diagnostico
+	id_genero -- genero	
+	id_municipio -- municipio
+	id_area_geografica -- area_geografica
+	cantidad
+	edad
+	fecha_diagnostico
+);
+
+
+
+<!-- fuente_salud(
 	nombre
 	descripcion
 );
@@ -462,7 +487,7 @@ registro_salud(
 	id_genero -- genero
 	id_condicion_salud -- condicion_salud
 	casos
-);
+); -->
 
 		
 

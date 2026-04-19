@@ -1,0 +1,132 @@
+
+
+        3. +Top 5 tipos de hechos delictivos más frecuentes en los últimos 5 años.
+1. / faltan datos Cantidad de homicidios registrados por año y departamento.
+2. /faltan datos Número de denuncias por violencia contra la mujer por municipio.
+12. /pocos datos Relación entre el tipo de empleo y la ocurrencia de hechos delictivos.
+
+
+        13. +Casos de violencia contra la mujer con sentencia firme.
+4. /Sentencias dictadas por tipo de delito y año.(seleccionar un ano y tipo de delito en concreto?)
+
+
+
+
+        8. +Porcentaje de denuncias por discriminación según etnia.
+        14. +Idiomas hablados por víctimas de discriminación.
+        29. +Comparativa de violencia estructural entre áreas urbanas y rurales.
+11. /pocos datos revisar Tasa de denuncias de violencia estructural procesadas vs. no procesadas.
+   
+
+5. - (pte)Promedio de edad de las víctimas de violencia intrafamiliar. 
+15. - no hay datos Número de personas por hogar en casos con denuncias de violencia intrafamiliar.
+
+6. -Distribución de embarazos adolescentes (menores de 19 años) por región.
+7. -Cantidad de casos de violencia infantil relacionados con trabajo infantil.
+16. - no hay datos Tasa de denuncias de violencia infantil en población escolarizada vs. no escolarizada.
+17. - no hay datos Casos de trabajo infantil por sector económico (agricultura, industria, etc.).
+        18. + Relación entre edad y tipo de violencia sufrida (infantil, intrafamiliar, estructural, etc.).
+    
+    
+    
+
+
+
+
+        19. Casos de desnutrición aguda por departamento, municipio y año.
+        20. Comparativa de casos de retardo en el desarrollo entre grupos etarios y sexo por región.
+        21. Departamentos con mayor incidencia de enfermedades crónicas según diagnóstico CIE-10.
+        22. Evolución anual de casos de dengue y dengue grave por departamento del 2012 al 2024.
+        23. Distribución de casos de malaria por grupo etario y sexo a nivel municipal.
+        25. Top 5 municipios con mayor cantidad de casos de Chagas, Zika y Chikungunya combinados.
+28. -NO jala Correlación entre casos de desnutrición y ocurrencia de hechos delictivos por municipio.
+        27. -Tasa de morbilidad materna infantil por año y departamento.
+        26. -Comparativa entre enfermedades transmitidas por vectores y nivel de urbanización por departamento.
+    24.- datos Relación entre casos de desnutrición aguda infantil y registros de violencia intrafamiliar por departamento.
+    
+
+
+
+        10. /sin datos Número de necropsias realizadas por año.
+        30. -Frecuencia de exhumaciones por tipo de delito relacionado.
+        9. +Comparativa entre nivel de escolaridad y tipo de falta judicial cometida.
+
+
+ 
+
+
+ 
+
+estos son los campos mas importantes:
+año_ing
+mes_ing	
+día_ing
+mupio_ocu
+
+edad_per(usarlo en persona)
+sexo_per(usarlo en persona)
+    
+- crearemos la tabla(catalogo): causa_muerte(campos(nombre, descripcion))
+- se usara la misma ubicacion para la persona y el hecho
+- usa los datos de fecha en hecho
+
+- se crearan los registros:
+    -   ubicacion 
+        id_municipio(el id correspondiente)
+    - hecho
+        id_tipo_hecho: 1
+
+    - persona
+        - nombre/apellidos(con faker)
+
+    - necropsia
+
+    - involucrado_hecho
+        id_tipo_involucramiento: 14
+
+
+
+ubicacion(
+	id_municipio -- municipio
+	id_area_geografica -- area_geografica
+	ciudad
+	zona
+	direccion_referencia
+);
+
+persona(
+	Nombres
+	apellidos
+	fecha_nacimiento
+	cui
+	id_genero -- genero
+	id_orientacion_sexual -- orientacion_sexual
+	id_grupo_etnico -- grupo_etnico
+	id_estado_civil -- estado_civil
+	id_condicion_alfabetica -- condicion_alfabetica
+	id_nivel_escolaridad  -- nivel_escolaridad
+	id_origen -- ubicacion
+	es_extranjero
+);
+
+hecho(
+	id_tipo_hecho -- tipo_hecho
+	id_ubicacion -- ubicacion
+	fecha_hecho
+);
+
+necropsia(
+	id_hecho -- hecho
+	id_persona -- persona
+	id_causa_muerte -- causa_muerte
+);
+
+
+
+involucrado_hecho(
+	id_hecho -- hecho
+	id_involucrado -- persona
+	id_tipo_involucramiento -- involucramiento
+);
+
+

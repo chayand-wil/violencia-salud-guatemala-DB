@@ -97,6 +97,24 @@ Instrucciones del proyecto para generacion, extraccion y carga de datos.
 
 ### Orden de Insercion para Retomar (Con Carpeta/Archivo)
 
+**ESTADO ACTUAL (17 de abril de 2026):**
+- Batches completados: 41-54 (carga antigua hasta B54; B55 ya quedó generado con la nueva estrategia)
+- Estado actual de carga: B58 completado con merge visible por etapas; staging limpiada para run_id=58 [STG_ROWS=0]
+- Pendiente real: B59-B120 del tramo visible; el tramo amplio de Agraviados sigue con batches posteriores preparados
+- Batches ya preparados en disco con la nueva estrategia: 55-223
+- La corrida visible ya cerró B58 sin segundo plano; el siguiente paso es continuar con B59 en el mismo patrón
+- Estimado tiempo restante (batch 110): ~8-9 horas, dependiendo del throughput final de los loaders
+- Batches totales a ejecutar para batch 110: 223 batches (filas 1 a 444513)
+
+**Cambios de estrategia (últimas iteraciones):**
+- ✅ Eliminada generación sed/copy per-batch (ahora generador unificado parametrizable)
+- ✅ Agregado pickle cache para lecturas Excel (0.71s vs 30s)
+- ✅ Refactorizado a INSERTs directos (sin EXECUTE BLOCK per fila)
+- ✅ Configurable CHUNK_SIZE (default 1000) para optimizar parsing SQL
+- ✅ Todos los INSERTs con guards NOT EXISTS para idempotencia
+
+---
+
 - [x] catalogos/tipo_fall.txt
 - [x] catalogos/tipo_hechos.txt
 - [x] catalogos/tipo_discriminacion.csv
@@ -117,18 +135,18 @@ Instrucciones del proyecto para generacion, extraccion y carga de datos.
 - [x] datos_base/Violencia/Violencia contra la mujer/Atencion brindada/Atenciones brindades por el Instituto de la Víctima 2020-2023(1).xlsx (batch transaccional 106)
 - [x] datos_base/Violencia/Violencia estructural/CASOS DISCRIMINACIÓN 2016-2023.xls (batch transaccional 107)
 - [x] datos_base/Violencia/Hechos-Delicitivos/PNC - Detenciados/detenidos.xlsx (batch transaccional 108)
-- [ ] datos_base/Violencia/Hechos-Delicitivos/PNC -Victimas/pnc_victimas.xlsx (batch 109 parcial cargado: filas 1-15000; pendiente 15001-39968)
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx (batch 110 parcial cargado: filas 1-1000; pendiente 1001-444513)
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Sindicatos/sindicados.xlsx (batch 111 parcial cargado: filas 1-1000; pendiente 1001-362321)
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Necropsias/necropsias.xlsx (batch 112 parcial cargado: filas 1-1000; pendiente 1001-11038)
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Exhumaciones/exhumaciones.xlsx (batch 113 parcial cargado: filas 1-60; pendiente 61-118)
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Evaluacion Medicos - INACIF/medicos_inacif.xlsx (batch 114 parcial cargado: filas 1-1000; pendiente 1001-148537)
-- [ ] datos_base/Violencia/Hechos-Delicitivos/Organismo judical - Sentenciados/sentenciados.xlsx (batch 115 parcial cargado: filas 1-1000; pendiente 1001-59812)
-- [ ] datos_base/Violencia/Violencia contra la ninez/Quejas Mineduc/20240719123138C8M6SpIQkU1dO569us4WzmhiEojxPhwf.xlsx (batch 117 parcial cargado: 250 eventos sinteticos; pendiente completar departamentos y volumen)
-- [ ] datos_base/Violencia/Violencia intrafamiliar/2023/Diccionario/2024052300613QDinUvuRa9GjopyXaTuNMXc3gd6Jq1Q1.xlsx (diccionario VIF 2023, analizado: referencia de codigos/etiquetas, sin carga transaccional directa)
-- [ ] datos_base/Violencia/Violencia intrafamiliar/2023/violencia_intrafamiliar.xlsx (batch 116 parcial cargado: filas 1-500; pendiente 501-37348)
-- [ ] datos_base/Violencia/Violencia intrafamiliar/2024/diccionario-de-variables-violencia-intrafamiliar.xlsx (diccionario VIF 2024, analizado: referencia de codigos/etiquetas, sin carga transaccional directa)
-- [ ] datos_base/Violencia/Violencia intrafamiliar/2024/base-de-datos-violencia-intrafamiliar-ano-2024_v3.xlsx (batch 118 parcial cargado: filas 1-500; pendiente 501-36609)
+- [x] datos_base/Violencia/Hechos-Delicitivos/PNC -Victimas/pnc_victimas.xlsx (batch 109 completado: filas 1-39968)
+- [~] datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx (B58 completado con staging visible; staging limpia [STG_ROWS=0]; B55 preparado/arrancado con estrategia nueva; B59-B223 ya generados o listos; estrategia nueva: INSERTs directos en bloque y staging por etapas con merge visible)
+- [x] datos_base/Violencia/Hechos-Delicitivos/Sindicatos/sindicados.xlsx (batch 111 completado con staging visible)
+- [x] datos_base/Violencia/Hechos-Delicitivos/Necropsias/necropsias.xlsx (batch 112 completado con staging visible)
+- [x] datos_base/Violencia/Hechos-Delicitivos/Exhumaciones/exhumaciones.xlsx (batch 113 completado con staging visible)
+- [x] datos_base/Violencia/Hechos-Delicitivos/Evaluacion Medicos - INACIF/medicos_inacif.xlsx (batch 114 completado con staging visible)
+- [x] datos_base/Violencia/Hechos-Delicitivos/Organismo judical - Sentenciados/sentenciados.xlsx (batch 115 completado con staging visible)
+- [x] datos_base/Violencia/Violencia contra la ninez/Quejas Mineduc/20240719123138C8M6SpIQkU1dO569us4WzmhiEojxPhwf.xlsx (batch 117 completado con staging visible)
+- [x] datos_base/Violencia/Violencia intrafamiliar/2023/Diccionario/2024052300613QDinUvuRa9GjopyXaTuNMXc3gd6Jq1Q1.xlsx (diccionario VIF 2023 analizado; referencia de codigos/etiquetas, sin carga transaccional directa)
+- [x] datos_base/Violencia/Violencia intrafamiliar/2023/violencia_intrafamiliar.xlsx (batch 116 completado con staging visible)
+- [x] datos_base/Violencia/Violencia intrafamiliar/2024/diccionario-de-variables-violencia-intrafamiliar.xlsx (diccionario VIF 2024 analizado; referencia de codigos/etiquetas, sin carga transaccional directa)
+- [x] datos_base/Violencia/Violencia intrafamiliar/2024/base-de-datos-violencia-intrafamiliar-ano-2024_v3.xlsx (batch 118 completado con staging visible)
 
 ### Validaciones Minimas por Paso
 

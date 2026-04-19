@@ -8,6 +8,23 @@ SET NAMES UTF8;
 */
 
 /* 1) LISTA: Cantidad de homicidios por anio y departamento */
+-- SELECT
+--     EXTRACT(YEAR FROM h.fecha_hecho) AS anio,
+--     d.nombre AS departamento,
+--     COUNT(*) AS total_homicidios
+-- FROM hecho_delictivo hd
+-- JOIN hecho h ON h.id_hecho = hd.id_hecho
+-- JOIN ubicacion u ON u.id_ubicacion = h.id_ubicacion
+-- JOIN municipio m ON m.id_municipio = u.id_municipio
+-- JOIN departamento d ON d.id_departamento = m.id_departamento
+-- JOIN delito_cometido dc ON dc.id_delito_cometido = hd.id_delito
+-- JOIN delito de ON de.id_delito = dc.id_tipo_delito
+-- WHERE de.nombre CONTAINING 'HOMICIDIO'
+-- GROUP BY 1, 2
+-- ORDER BY 1, 2;
+
+
+
 SELECT
     EXTRACT(YEAR FROM h.fecha_hecho) AS anio,
     d.nombre AS departamento,
@@ -19,37 +36,50 @@ JOIN municipio m ON m.id_municipio = u.id_municipio
 JOIN departamento d ON d.id_departamento = m.id_departamento
 JOIN delito_cometido dc ON dc.id_delito_cometido = hd.id_delito
 JOIN delito de ON de.id_delito = dc.id_tipo_delito
-WHERE de.nombre CONTAINING 'HOMICIDIO'
-GROUP BY 1, 2
-ORDER BY 1, 2;
+LEFT JOIN clasificacion_delito cd 
+       ON cd.id_clasificacion_delito = dc.id_clasificacion_delito
+WHERE 
+      de.nombre CONTAINING 'HOMICI'
+   OR cd.nombre CONTAINING 'HOMICI'
+GROUP BY EXTRACT(YEAR FROM h.fecha_hecho), d.nombre
+ORDER BY total_homicidios DESC, anio dESC;
 
 /* 2) LISTA/PARCIAL: Denuncias por violencia contra la mujer por municipio */
 SELECT
     d.nombre AS departamento,
     m.nombre AS municipio,
-    COUNT(*) AS total_denuncias
+    COUNT(*) AS total_denuncias,
+    cd.nombre as clasificacion_delito,
+    de.nombre as delito
 FROM denuncia dn
 JOIN hecho h ON h.id_hecho = dn.id_hecho
 JOIN tipo_hecho th ON th.id_tipo_hecho = h.id_tipo_hecho
+JOIN hecho_delictivo hd ON hd.id_hecho = h.id_hecho
 JOIN ubicacion u ON u.id_ubicacion = h.id_ubicacion
 JOIN municipio m ON m.id_municipio = u.id_municipio
 JOIN departamento d ON d.id_departamento = m.id_departamento
-WHERE th.nombre CONTAINING 'MUJER'
-   OR th.nombre CONTAINING 'VIOLENCIA CONTRA LA MUJER'
-   OR th.nombre CONTAINING 'VCM'
-GROUP BY 1, 2
+JOIN delito_cometido dc ON dc.id_delito_cometido = hd.id_delito
+JOIN delito de ON de.id_delito = dc.id_tipo_delito
+LEFT JOIN clasificacion_delito cd 
+       ON cd.id_clasificacion_delito = dc.id_clasificacion_delito
+WHERE 
+      de.nombre CONTAINING 'MUJER'
+   OR cd.nombre CONTAINING 'MUJER'
+GROUP BY d.nombre, m.nombre, cd.nombre, de.nombre
 ORDER BY total_denuncias DESC;
 
 /* 3) LISTA: Top 5 tipos de hechos delictivos en ultimos 5 anios */
 SELECT FIRST 5
     cd.nombre AS clasificacion_delito,
+    d.nombre AS delito,
     COUNT(*) AS total_casos
 FROM hecho_delictivo hd
 JOIN hecho h ON h.id_hecho = hd.id_hecho
 JOIN delito_cometido dc ON dc.id_delito_cometido = hd.id_delito
 JOIN clasificacion_delito cd ON cd.id_clasificacion_delito = dc.id_clasificacion_delito
+Join delito d ON d.id_delito = dc.id_tipo_delito
 WHERE h.fecha_hecho >= DATEADD(-5 YEAR TO CURRENT_DATE)
-GROUP BY 1
+GROUP BY 1, 2
 ORDER BY total_casos DESC;
 
 /* 4) LISTA: Sentencias dictadas por tipo de delito y anio */
@@ -304,6 +334,8 @@ WHERE rs.indicador_salud CONTAINING 'CRONICA'
    OR cs.nombre CONTAINING 'CRONICA'
 GROUP BY 1, 2, 3
 ORDER BY 1, total_casos DESC;
+
+
 
 /* 22) PARCIAL: Evolucion dengue y dengue grave 2012-2024 */
 SELECT
