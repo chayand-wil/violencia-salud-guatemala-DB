@@ -2,8 +2,11 @@
 sql/db/violencia_guate.fdb
 
 # Large generated SQL inserts (regenerable from ETL)
-sql/inserts/transaccional/*.sql
+sql/inserts/transaccional/
 entregables/sql/
+
+# Cache
+tmp/cache/
 
 # Python cache
 __pycache__/
