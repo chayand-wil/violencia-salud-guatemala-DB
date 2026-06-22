@@ -61,7 +61,7 @@ def ejemplo_savepoint():
         conn.close()
 
 # ---------------------------------------------------
-# Ejemplo 4: Uso en contexto real (Firebird, ver etl_salud.py)
+# Ejemplo 4: Uso en contexto real (Firebird, ver etl/etl_salud.py)
 # ---------------------------------------------------
 # En tu proyecto, el patrón es similar pero usando firebird.driver:
 #

@@ -14,8 +14,8 @@
    - **Tamaño:** 45.9 KB
    - **Formato:** .docx (editable en Word, Google Docs, LibreOffice)
 
-### 2. **informe_contenido_completo.md** 
-   - **Ubicación:** `informe_contenido_completo.md`
+### 2. **docs/informe_contenido_completo.md** 
+   - **Ubicación:** `docs/informe_contenido_completo.md`
    - **Contenido:** Versión en Markdown del informe completo
    - **Utilidad:** 
      - Fácil de versionear en Git
@@ -23,16 +23,16 @@
      - Fuente para regenerar .docx si necesitas cambios
    - **Ventaja:** Separación entre contenido y formato
 
-### 3. **generar_docx_profesional.py**
-   - **Ubicación:** `generar_docx_profesional.py`
+### 3. **entregables/generar_docx_profesional.py**
+   - **Ubicación:** `entregables/generar_docx_profesional.py`
    - **Función:** Script Python que convierte Markdown → Word profesional
    - **Uso:** Si necesitas actualizar contenido después:
-     ```bash
-     python3 generar_docx_profesional.py
-     ```
+      ```bash
+      python3 entregables/generar_docx_profesional.py
+      ```
 
-### 4. **SQL_a_Algebra_Relacional.md**
-   - **Ubicación:** `SQL_a_Algebra_Relacional.md` (generado en sesión anterior)
+### 4. **docs/SQL_a_Algebra_Relacional.md**
+   - **Ubicación:** `docs/SQL_a_Algebra_Relacional.md` (generado en sesión anterior)
    - **Contenido:** Referencia detallada de conversión SQL → Álgebra Relacional
    - **Incluye:** Ejemplos visuales y explicaciones paso a paso
 
@@ -50,8 +50,8 @@
 
 ### Opción B: Editar Markdown y regenerar
 ```
-1. Edita: informe_contenido_completo.md
-2. Ejecuta: python3 generar_docx_profesional.py
+1. Edita: docs/informe_contenido_completo.md
+2. Ejecuta: python3 entregables/generar_docx_profesional.py
 3. Se genera nuevo .docx automáticamente
 4. Abre en Word para ajustes finos
 ```
@@ -59,14 +59,10 @@
 ### Opción C: Versionamiento Git
 ```
 1. Commit Markdown:
-   git add informe_contenido_completo.md
-   git commit -m "Actualización secciones del informe"
-   
-2. Regenera .docx solo para entregar
-   python3 generar_docx_profesional.py
-   
-3. Commit .docx final
-   git add entregables/Informe_Proyecto_Violencia_COMPLETO.docx
+    git add docs/informe_contenido_completo.md
+    git commit -m "Actualización secciones del informe"
+    
+    git add entregables/Informe_Proyecto_Violencia_COMPLETO.docx
 ```
 
 ---
@@ -158,8 +154,8 @@
 
 ```
 Session 1: Generación Inicial (YA HECHO ✅)
-├─ Crear informe_contenido_completo.md
-├─ Ejecutar generar_docx_profesional.py
+├─ Crear docs/informe_contenido_completo.md
+├─ Ejecutar entregables/generar_docx_profesional.py
 └─ Verificar entregables/Informe_Proyecto_Violencia_COMPLETO.docx
 
 Session 2: Edición en Word (PRÓXIMO PASO)
@@ -223,9 +219,9 @@ Session 3: Exportar PDF
 **R:** Sí: Archivo → Guardar Como → Formato PDF. Se mantiene todo el formato.
 
 ### P: ¿Y si quiero volver a regenerar todo?
-**R:** Edita `informe_contenido_completo.md` y ejecuta:
+**R:** Edita `docs/informe_contenido_completo.md` y ejecuta:
 ```bash
-python3 generar_docx_profesional.py
+python3 entregables/generar_docx_profesional.py
 ```
 
 ---
@@ -243,12 +239,14 @@ python3 generar_docx_profesional.py
 ```
 Proyecto/
 ├── entregables/
-│   └── Informe_Proyecto_Violencia_COMPLETO.docx ⭐ PRINCIPAL
+│   ├── Informe_Proyecto_Violencia_COMPLETO.docx ⭐ PRINCIPAL
+│   ├── generar_docx_profesional.py (Script)
+│   └── generar_informe_completo.py (Script)
 │
-├── informe_contenido_completo.md (Markdown)
-├── generar_docx_profesional.py (Script)
-├── SQL_a_Algebra_Relacional.md (Referencia)
-└── README_Informe.md (Este archivo)
+├── docs/
+│   ├── informe_contenido_completo.md (Markdown)
+│   ├── SQL_a_Algebra_Relacional.md (Referencia)
+│   └── README_Informe.md (Este archivo)
 ```
 
 ---

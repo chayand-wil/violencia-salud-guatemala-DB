@@ -733,7 +733,7 @@ violencia_guate/
 
 ### C. Referencias de Operadores Álgebra Relacional
 
-Vea documento adjunto: `SQL_a_Algebra_Relacional.md`
+Vea documento adjunto: `docs/SQL_a_Algebra_Relacional.md`
 
 ### D. Contacto
 

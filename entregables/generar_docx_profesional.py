@@ -9,7 +9,7 @@ import textwrap
 
 FECHA_ENTREGA = "16 de abril de 2026"
 TITULO_PROYECTO = "Violencia e indicadores de salud en Guatemala"
-SALIDA = "entregables/Informe_Proyecto_Violencia_COMPLETO.docx"
+SALIDA = "Informe_Proyecto_Violencia_COMPLETO.docx"
 
 CONSULTAS = [
     {
@@ -451,7 +451,7 @@ def main():
     seccion_conclusiones(doc)
 
     import os
-    os.makedirs("entregables", exist_ok=True)
+    os.makedirs(os.path.dirname(SALIDA) or ".", exist_ok=True)
     doc.save(SALIDA)
     print(f"Documento generado: {SALIDA}")
 

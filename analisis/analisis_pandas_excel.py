@@ -23,11 +23,11 @@ import pandas as pd
 
 DEFAULT_FILES = [
     Path(
-        "Violencia/Hechos-Delicitivos/Agraviados/"
+        "../datos_base/Violencia/Hechos-Delicitivos/Agraviados/"
         "20240528163342pWf6BcBWj8taVS3Q3mRKxgDsvwPejgH8.xlsx"
     ),
     Path(
-        "Violencia/Faltas judiciales/"
+        "../datos_base/Violencia/Faltas judiciales/"
         "20240524231759eHmz6DmFKboNQ5Y3OlqNkbi9izmXULaP.xlsx"
     ),
 ]
@@ -112,7 +112,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output",
-        default="reportes_pandas",
+        default="../reportes_pandas",
         help="Carpeta donde se escribirán los reportes.",
     )
     return parser.parse_args()

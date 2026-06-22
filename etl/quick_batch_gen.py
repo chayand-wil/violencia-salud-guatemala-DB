@@ -15,7 +15,7 @@ def main() -> int:
     chunk_size = int(sys.argv[2]) if len(sys.argv) > 2 else 1000
     start_idx = 61000 + (batch_num - 41) * 2000
     root = Path(__file__).resolve().parent
-    generator = root / "etl" / "generate_agraviados_batch.py"
+    generator = root / "generate_agraviados_batch.py"
 
     cmd = [
         sys.executable,

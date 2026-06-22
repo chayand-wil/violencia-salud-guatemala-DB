@@ -46,10 +46,10 @@ registros_unicos.sort()
 
 # Guardar catálogo
 df_out = pd.DataFrame(registros_unicos, columns=["nombre", "CIE-10", "id_tipo_diagnostico"])
-df_out.to_csv("catalogo_diagnosticos.csv", index=False, encoding='utf-8')
+df_out.to_csv("../datos_base/Salud/catalogo_diagnosticos.csv", index=False, encoding='utf-8')
 
 if archivos_faltantes:
-    with open("catalogo_diagnosticos_faltantes.txt", "w", encoding="utf-8") as f:
+    with open("../datos_base/Salud/catalogo_diagnosticos_faltantes.txt", "w", encoding="utf-8") as f:
         for archivo, cols in archivos_faltantes:
             f.write(f"{archivo}: {cols}\n")
     print(f"Algunos archivos no tienen los campos requeridos. Ver catalogo_diagnosticos_faltantes.txt")

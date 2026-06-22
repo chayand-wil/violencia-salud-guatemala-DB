@@ -20,8 +20,8 @@
    
 ───────────────────────────────────────────────────────────────────────────────
 
-2. 📝 informe_contenido_completo.md (28 KB, 748 líneas)
-   ├─ Ubicación: informe_contenido_completo.md
+2. 📝 docs/informe_contenido_completo.md (28 KB, 748 líneas)
+   ├─ Ubicación: docs/informe_contenido_completo.md
    ├─ Formato: Markdown (editable en cualquier editor)
    ├─ Estado: ✅ VERSIONABLE EN GIT
    ├─ Contenido: Versión en texto del informe completo
@@ -34,22 +34,22 @@
    
 ───────────────────────────────────────────────────────────────────────────────
 
-3. 🔧 generar_docx_profesional.py (12 KB)
-   ├─ Ubicación: generar_docx_profesional.py
+3. 🔧 entregables/generar_docx_profesional.py (12 KB)
+   ├─ Ubicación: entregables/generar_docx_profesional.py
    ├─ Función: Convierte Markdown → .docx profesional
    ├─ Lenguaje: Python 3
    ├─ Dependencia: python-docx (ya instalado)
    ├─ Uso:
    │  ├─ Edita informe_contenido_completo.md
-   │  ├─ Ejecuta: python3 generar_docx_profesional.py
+   │     ├─ Ejecuta: python3 entregables/generar_docx_profesional.py
    │  ├─ Se regenera el .docx automáticamente
    │  └─ Abre en Word para ajustes finales
    └─ Ventaja: Automatiza cambios masivos
    
 ───────────────────────────────────────────────────────────────────────────────
 
-4. 📚 README_Informe.md (8 KB)
-   ├─ Ubicación: README_Informe.md
+4. 📚 docs/README_Informe.md (8 KB)
+   ├─ Ubicación: docs/README_Informe.md
    ├─ Función: Guía de uso y referencia
    ├─ Contenido:
    │  ├─ Explicación de cada archivo
@@ -62,8 +62,8 @@
    
 ───────────────────────────────────────────────────────────────────────────────
 
-5. 📖 SQL_a_Algebra_Relacional.md (CREADO EN SESIÓN ANTERIOR)
-   ├─ Ubicación: SQL_a_Algebra_Relacional.md
+5. 📖 docs/SQL_a_Algebra_Relacional.md (CREADO EN SESIÓN ANTERIOR)
+   ├─ Ubicación: docs/SQL_a_Algebra_Relacional.md
    ├─ Contenido: Análisis detallado de conversión SQL → Álgebra Relacional
    ├─ Incluye: 7 consultas con explicaciones paso a paso
    └─ Referencia: Para justificar la teoría en el informe
@@ -140,8 +140,8 @@ OPCIÓN A: Solo editar en Word (RECOMENDADO PARA TI)
 
 OPCIÓN B: Editar Markdown y regenerar
 ──────────────────────────────────────
-1. Edita: informe_contenido_completo.md (en cualquier editor)
-2. Ejecuta: python3 generar_docx_profesional.py
+1. Edita: docs/informe_contenido_completo.md (en cualquier editor)
+2. Ejecuta: python3 entregables/generar_docx_profesional.py
 3. Se crea nuevo .docx automáticamente
 4. Abre en Word para ajustes finos
 
@@ -152,10 +152,10 @@ OPCIÓN B: Editar Markdown y regenerar
 
 OPCIÓN C: Versionamiento completo con Git
 ──────────────────────────────────────────
-1. Edita: informe_contenido_completo.md
-2. git add informe_contenido_completo.md
+1. Edita: docs/informe_contenido_completo.md
+2. git add docs/informe_contenido_completo.md
 3. git commit -m "Actualización secciones"
-4. python3 generar_docx_profesional.py
+4. python3 entregables/generar_docx_profesional.py
 5. git add entregables/Informe_Proyecto_Violencia_COMPLETO.docx
 6. git commit -m "Informe regenerado"
 
@@ -253,11 +253,16 @@ R: Archivo → Guardar Como → Formato: PDF
 
 /Users/wilsonjonatan/Documents/bases 1 2026/violencia guate/
 ├── entregables/
-│   └── Informe_Proyecto_Violencia_COMPLETO.docx ⭐
-├── informe_contenido_completo.md
-├── generar_docx_profesional.py
-├── README_Informe.md
-└── SQL_a_Algebra_Relacional.md
+│   ├── Informe_Proyecto_Violencia_COMPLETO.docx ⭐
+│   ├── generar_docx_profesional.py
+│   └── generar_informe_completo.py
+├── docs/
+│   ├── informe_contenido_completo.md
+│   ├── README_Informe.md
+│   └── SQL_a_Algebra_Relacional.md
+├── etl/
+├── analisis/
+└── sql/
 
 ═══════════════════════════════════════════════════════════════════════════════
 

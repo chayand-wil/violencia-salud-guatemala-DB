@@ -21,7 +21,7 @@ import unicodedata
 import pandas as pd
 from firebird.driver import connect
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DB_DSN = f"localhost:{BASE_DIR / 'sql' / 'db' / 'violencia_guate.fdb'}"
 DB_USER = "sysdba"
 DB_PASSWORD = "masterkey"

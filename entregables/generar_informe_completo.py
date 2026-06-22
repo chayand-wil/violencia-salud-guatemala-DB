@@ -12,7 +12,7 @@ from docx.oxml import OxmlElement
 import os
 
 # Ruta del documento
-RUTA_DOCX = 'docs/Informe violencia .docx'
+RUTA_DOCX = '../docs/Informe violencia .docx'
 
 def agregar_texto_formateado(doc, texto, estilo='normal', tamaño=11, negrita=False, color=None):
     """Agrega párrafo con formato personalizado"""
@@ -251,8 +251,8 @@ def main():
     consultas = agregar_consultas_ar(doc)
     
     # Step 4: Guardar documento
-    output_path = 'entregables/Informe_Proyecto_Violencia_COMPLETO.docx'
-    os.makedirs('entregables', exist_ok=True)
+    output_path = 'Informe_Proyecto_Violencia_COMPLETO.docx'
+    os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
     
     doc.save(output_path)
     print(f"\n✅ Documento actualizado guardado en: {output_path}")

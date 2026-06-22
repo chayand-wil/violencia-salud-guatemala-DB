@@ -28,7 +28,7 @@ import pandas as pd
 from faker import Faker
 from firebird.driver import connect
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 EXCEL_PATH = BASE_DIR / "datos_base" / "Violencia" / "Hechos-Delicitivos" / "Necropsias" / "necropsias.xlsx"
 DB_DSN = f"localhost:{BASE_DIR / 'sql' / 'db' / 'violencia_guate.fdb'}"
 DB_USER = "sysdba"

@@ -16,7 +16,7 @@ for BATCH in $(seq $START_BATCH $END_BATCH); do
   BATCH_START=$(date +%s)
 
   # Generate batch using helper
-  $PY quick_batch_gen.py "$BATCH" "$CHUNK_SIZE"
+  $PY etl/quick_batch_gen.py "$BATCH" "$CHUNK_SIZE"
 
   # Load batch
   LOAD_OUT=$($PY etl/load_agraviados_batch_fast.py --chunks-dir "sql/inserts/transaccional/chunks_110_b${BATCH}" 2>&1)

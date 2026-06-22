@@ -24,7 +24,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 from firebird.driver import connect as fb_connect
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "datos_base" / "Salud"
 DB_PATH = BASE_DIR / "sql" / "db" / "violencia_guate.fdb"
 DSN = f"localhost:{DB_PATH}"
