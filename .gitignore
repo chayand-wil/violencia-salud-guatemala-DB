@@ -1,0 +1,13 @@
+# Database (regenerable from SQL scripts)
+sql/db/violencia_guate.fdb
+
+# Large generated SQL inserts (regenerable from ETL)
+sql/inserts/transaccional/*.sql
+entregables/sql/
+
+# Python cache
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+tmp/
