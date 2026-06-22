@@ -1,0 +1,1808 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Proyecto de Bases de Datos 1 - Universidad de San Carlos de Guatemala">
+      
+      
+        <meta name="author" content="Wilson Jonatan Chay Santizo">
+      
+      
+        <link rel="canonical" href="https://chayand-wil.github.io/violencia-salud-guatemala-DB/pendientes_carga/">
+      
+      
+        <link rel="prev" href="../RESUMEN_ENTREGABLES/">
+      
+      
+        <link rel="next" href="../resumen_campos_abstraidos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Carga de Datos - Violencia e Indicadores de Salud - Guatemala</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pendientes-de-carga" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Violencia e Indicadores de Salud - Guatemala" class="md-header__button md-logo" aria-label="Violencia e Indicadores de Salud - Guatemala" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Violencia e Indicadores de Salud - Guatemala
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Carga de Datos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/chayand-wil/violencia-salud-guatemala-DB" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chayand-wil/violencia-salud-guatemala-DB
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../informe_contenido_completo/" class="md-tabs__link">
+          
+  
+  
+  Informe del Proyecto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../RESUMEN_ENTREGABLES/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resumen de Entregables
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Carga de Datos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../resumen_campos_abstraidos/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Referencia de Campos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../README_Informe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guía de Uso
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Violencia e Indicadores de Salud - Guatemala" class="md-nav__button md-logo" aria-label="Violencia e Indicadores de Salud - Guatemala" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Violencia e Indicadores de Salud - Guatemala
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/chayand-wil/violencia-salud-guatemala-DB" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chayand-wil/violencia-salud-guatemala-DB
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informe del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Informe del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../informe_contenido_completo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informe Completo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SQL_a_Algebra_Relacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL y Álgebra Relacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUMEN_ENTREGABLES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen de Entregables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Carga de Datos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Carga de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modo-de-carga-rapida-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo de carga rapida (seguro)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-109-pnc-victimas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 109 - PNC victimas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 4)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 5)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 6)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 7)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 8)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 9)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 10)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 12)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 13)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 15)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 16)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-116-violencia-intrafamiliar-2023-parcial-cargado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 116 - Violencia intrafamiliar 2023 (parcial cargado)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-117-quejas-mineduc-2023-parcial-cargado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 117 - Quejas Mineduc 2023 (parcial cargado)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-118-violencia-intrafamiliar-2024-parcial-cargado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 118 - Violencia intrafamiliar 2024 (parcial cargado)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-conteos-despues-de-116117118" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen de conteos despues de 116+117+118
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diccionarios-vif-20232024-analizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diccionarios VIF 2023/2024 (analizados)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resumen_campos_abstraidos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia de Campos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../README_Informe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modo-de-carga-rapida-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo de carga rapida (seguro)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-109-pnc-victimas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 109 - PNC victimas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 4)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 5)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 6)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 7)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 8)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 9)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 10)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 12)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 13)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 15)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 16)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-110-agraviados-avance-adicional-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 110 - Agraviados (avance adicional 17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-116-violencia-intrafamiliar-2023-parcial-cargado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 116 - Violencia intrafamiliar 2023 (parcial cargado)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-117-quejas-mineduc-2023-parcial-cargado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 117 - Quejas Mineduc 2023 (parcial cargado)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-118-violencia-intrafamiliar-2024-parcial-cargado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch 118 - Violencia intrafamiliar 2024 (parcial cargado)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-conteos-despues-de-116117118" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen de conteos despues de 116+117+118
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diccionarios-vif-20232024-analizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diccionarios VIF 2023/2024 (analizados)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="pendientes-de-carga">Pendientes de carga</h1>
+<h2 id="modo-de-carga-rapida-seguro">Modo de carga rapida (seguro)</h2>
+<ul>
+<li>Para Agraviados, usar el cargador <a href="https://github.com/chayand-wil/violencia-salud-guatemala-DB/blob/main/etl/load_agraviados_batch_fast.py">etl/load_agraviados_batch_fast.py</a> para ejecutar todos los chunks en una sola sesion de isql.</li>
+<li>En el primer batch del dia, ejecutar con catalogos incluidos usando la opcion --with-catalogs.</li>
+<li>En batches consecutivos sin cambios en catalogos, ejecutar sin --with-catalogs para evitar sobrecosto.</li>
+<li>Mantener validacion before/after e idempotencia del chunk final en cada batch.</li>
+<li>Plantilla actualizada a CHUNK_SIZE=500 en <a href="https://github.com/chayand-wil/violencia-salud-guatemala-DB/blob/main/etl/generate_agraviados_batch25_sql.py">etl/generate_agraviados_batch25_sql.py</a> para reducir numero de chunks por tramo.</li>
+</ul>
+<h2 id="batch-109-pnc-victimas">Batch 109 - PNC victimas</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/PNC -Victimas/pnc_victimas.xlsx</li>
+<li>Total filas fuente: 39968</li>
+<li>Rango cargado final: 1 a 39968</li>
+<li>Rango pendiente: ninguno</li>
+<li>Chunks generados para ejecucion segura: 25 (directorio: sql/inserts/transaccional/chunks_109_b2)</li>
+<li>Estado de ejecucion: completado (se retomaron y ejecutaron <code>chunks_109_b2</code> partes 14 a 25).</li>
+<li>Conteos antes/despues del cierre de este pendiente:<ul>
+<li>persona: 249575 -&gt; 261543</li>
+<li>hecho: 248582 -&gt; 260550</li>
+<li>involucrado_hecho: 243959 -&gt; 255927</li>
+</ul>
+</li>
+<li>Verificacion de cobertura de rango batch2:<ul>
+<li>min fila cargada: 15001</li>
+<li>max fila cargada: 39968</li>
+<li>total filas batch2 presentes: 24968</li>
+</ul>
+</li>
+<li>Siguiente accion sugerida: continuar con Batch 110 (agraviados), pendiente desde fila 1001.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional">Batch 110 - Agraviados (avance adicional)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Total filas fuente: 444513</li>
+<li>Estado anterior: parcial cargado 1 a 41000</li>
+<li>Estado actual: parcial cargado 1 a 43000</li>
+<li>Rango pendiente: 43001 a 444513</li>
+<li>SQL generado para este avance:</li>
+<li>
+<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch30_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b30/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: loader rapido en una sola sesion isql (sin catalogos, ya estables).</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 301534 -&gt; 303534</li>
+<li>hecho: 300541 -&gt; 302541</li>
+<li>involucrado_hecho: 295918 -&gt; 297918</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (41001..43000): 2000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento (500 -&gt; 500).</li>
+<li>Siguiente accion sugerida: generar/ejecutar Batch 110 siguiente tramo desde <code>START_INDEX = 43000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-2">Batch 110 - Agraviados (avance adicional 2)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 2000</li>
+<li>Estado actual: parcial cargado 1 a 3000</li>
+<li>Rango pendiente: 3001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch3_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b3/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b3</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 262543 -&gt; 263543</li>
+<li>hecho: 261550 -&gt; 262550</li>
+<li>involucrado_hecho: 256927 -&gt; 257927</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (2001..3000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 3000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-3">Batch 110 - Agraviados (avance adicional 3)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 3000</li>
+<li>Estado actual: parcial cargado 1 a 4000</li>
+<li>Rango pendiente: 4001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch4_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b4/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b4</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 263543 -&gt; 264543</li>
+<li>hecho: 262550 -&gt; 263550</li>
+<li>involucrado_hecho: 257927 -&gt; 258927</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (3001..4000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_01.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 4000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-4">Batch 110 - Agraviados (avance adicional 4)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 4000</li>
+<li>Estado actual: parcial cargado 1 a 5000</li>
+<li>Rango pendiente: 5001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch5_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b5/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b5</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 264543 -&gt; 265543</li>
+<li>hecho: 263550 -&gt; 264550</li>
+<li>involucrado_hecho: 258927 -&gt; 259927</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (4001..5000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 5000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-5">Batch 110 - Agraviados (avance adicional 5)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 5000</li>
+<li>Estado actual: parcial cargado 1 a 6000</li>
+<li>Rango pendiente: 6001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch6_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b6/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b6</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 265543 -&gt; 266543</li>
+<li>hecho: 264550 -&gt; 265550</li>
+<li>involucrado_hecho: 259927 -&gt; 260927</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (5001..6000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_01.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 6000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-6">Batch 110 - Agraviados (avance adicional 6)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 6000</li>
+<li>Estado actual: parcial cargado 1 a 7000</li>
+<li>Rango pendiente: 7001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch7_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b7/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b7</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 266543 -&gt; 267543</li>
+<li>hecho: 265550 -&gt; 266550</li>
+<li>involucrado_hecho: 260927 -&gt; 261927</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (6001..7000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 7000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-7">Batch 110 - Agraviados (avance adicional 7)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 7000</li>
+<li>Estado actual: parcial cargado 1 a 8000</li>
+<li>Rango pendiente: 8001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch8_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b8/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b8</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 267793 -&gt; 268543</li>
+<li>hecho: 266800 -&gt; 267550</li>
+<li>involucrado_hecho: 262177 -&gt; 262927</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (7001..8000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 8000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-8">Batch 110 - Agraviados (avance adicional 8)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 8000</li>
+<li>Estado actual: parcial cargado 1 a 9000</li>
+<li>Rango pendiente: 9001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch9_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b9/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b9</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 268543 -&gt; 269543</li>
+<li>hecho: 267550 -&gt; 268550</li>
+<li>involucrado_hecho: 262927 -&gt; 263927</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (8001..9000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 9000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-9">Batch 110 - Agraviados (avance adicional 9)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 9000</li>
+<li>Estado actual: parcial cargado 1 a 10000</li>
+<li>Rango pendiente: 10001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch10_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b10/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b10</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 269543 -&gt; 270543</li>
+<li>hecho: 268550 -&gt; 269550</li>
+<li>involucrado_hecho: 263927 -&gt; 264927</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (9001..10000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 10000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-10">Batch 110 - Agraviados (avance adicional 10)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 10000</li>
+<li>Estado actual: parcial cargado 1 a 11000</li>
+<li>Rango pendiente: 11001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch11_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b11/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b11</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 270543 -&gt; 271542</li>
+<li>hecho: 269550 -&gt; 270549</li>
+<li>involucrado_hecho: 264927 -&gt; 265926</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (10001..11000): 999 registros presentes</li>
+<li>Observacion: el generador reporto 1 fila omitida en este tramo; se conserva la trazabilidad del rango y no se detecto duplicacion en la reejecucion.</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 11000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-11">Batch 110 - Agraviados (avance adicional 11)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 11000</li>
+<li>Estado actual: parcial cargado 1 a 12000</li>
+<li>Rango pendiente: 12001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch12_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b12/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b12</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 271542 -&gt; 272542</li>
+<li>hecho: 270549 -&gt; 271549</li>
+<li>involucrado_hecho: 265926 -&gt; 266926</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (11001..12000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 12000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-12">Batch 110 - Agraviados (avance adicional 12)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 12000</li>
+<li>Estado actual: parcial cargado 1 a 13000</li>
+<li>Rango pendiente: 13001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch13_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b13/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b13</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 272542 -&gt; 273540</li>
+<li>hecho: 271549 -&gt; 272547</li>
+<li>involucrado_hecho: 266926 -&gt; 267924</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (12001..13000): 998 registros presentes</li>
+<li>Observacion: el generador reporto 2 filas omitidas en este tramo; se conserva la trazabilidad del rango y no se detecto duplicacion en la reejecucion.</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 13000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-13">Batch 110 - Agraviados (avance adicional 13)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 13000</li>
+<li>Estado actual: parcial cargado 1 a 14000</li>
+<li>Rango pendiente: 14001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch14_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b14/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b14</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 273540 -&gt; 274540</li>
+<li>hecho: 272547 -&gt; 273547</li>
+<li>involucrado_hecho: 267924 -&gt; 268924</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (13001..14000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 14000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-14">Batch 110 - Agraviados (avance adicional 14)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 14000</li>
+<li>Estado actual: parcial cargado 1 a 15000</li>
+<li>Rango pendiente: 15001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch15_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b15/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b15</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 274540 -&gt; 275540</li>
+<li>hecho: 273547 -&gt; 274547</li>
+<li>involucrado_hecho: 268924 -&gt; 269924</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (14001..15000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 15000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-15">Batch 110 - Agraviados (avance adicional 15)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 15000</li>
+<li>Estado actual: parcial cargado 1 a 16000</li>
+<li>Rango pendiente: 16001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch16_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b16/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b16</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 275540 -&gt; 276540</li>
+<li>hecho: 274547 -&gt; 275547</li>
+<li>involucrado_hecho: 269924 -&gt; 270924</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (15001..16000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 16000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-16">Batch 110 - Agraviados (avance adicional 16)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 16000</li>
+<li>Estado actual: parcial cargado 1 a 17000</li>
+<li>Rango pendiente: 17001 a 444513</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch17_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b17/110_agraviados_part_01.sql</code> a <code>..._04.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b17</code> (01..04)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 276540 -&gt; 277540</li>
+<li>hecho: 275547 -&gt; 276547</li>
+<li>involucrado_hecho: 270924 -&gt; 271924</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (16001..17000): 1000 registros presentes</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_04.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 17000</code>.</li>
+</ul>
+<h2 id="batch-110-agraviados-avance-adicional-17">Batch 110 - Agraviados (avance adicional 17)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Hechos-Delicitivos/Agraviados/agraviados.xlsx</li>
+<li>Estado anterior: parcial cargado 1 a 17000</li>
+<li>Estado actual: parcial cargado 1 a 19000</li>
+<li>Rango pendiente: 19001 a 444513</li>
+<li>Tamaño de carga: 2000 filas candidatas</li>
+<li>SQL generado para este avance:<ul>
+<li>Transaccional: <code>sql/inserts/transaccional/110_agraviados_batch18_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_110_b18/110_agraviados_part_01.sql</code> a <code>..._08.sql</code></li>
+</ul>
+</li>
+<li>Ejecucion realizada: catalogos <code>066/067/068</code> + chunks <code>110_b18</code> (01..08)</li>
+<li>Conteos antes/despues de este avance:<ul>
+<li>persona: 277540 -&gt; 279538</li>
+<li>hecho: 276547 -&gt; 278545</li>
+<li>involucrado_hecho: 271924 -&gt; 273922</li>
+</ul>
+</li>
+<li>Verificacion de rango cargado (17001..19000): 1998 registros presentes</li>
+<li>Observacion: el generador reporto 2 filas omitidas en este tramo; se confirma que el lote mas grande funciona y sigue siendo idempotente.</li>
+<li>Idempotencia puntual: re-ejecutado <code>110_agraviados_part_08.sql</code> sin incremento.</li>
+<li>Siguiente accion sugerida: generar/ejecutar siguiente tramo desde <code>START_INDEX = 19000</code>.</li>
+</ul>
+<h2 id="batch-116-violencia-intrafamiliar-2023-parcial-cargado">Batch 116 - Violencia intrafamiliar 2023 (parcial cargado)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Violencia intrafamiliar/2023/violencia_intrafamiliar.xlsx</li>
+<li>Total filas fuente: 37348</li>
+<li>Rango cargado en parcial: 1 a 500</li>
+<li>Rango pendiente: 501 a 37348</li>
+<li>Archivos SQL generados:<ul>
+<li>Catalogos: <code>sql/inserts/catalogos/087_tipo_agresion_intrafamiliar_2023.sql</code>, <code>sql/inserts/catalogos/088_involucramiento_vif.sql</code></li>
+<li>Transaccional: <code>sql/inserts/transaccional/116_vif_2023_batch1_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_116/116_vif_2023_part_01.sql</code> a <code>..._05.sql</code></li>
+</ul>
+</li>
+<li>Estado de ejecucion: ejecutado por <code>isql</code> con DSN <code>localhost:/.../violencia_guate.fdb</code>.</li>
+<li>Conteos asociados tras carga: <code>caso_violencia_intrafamiliar</code> paso de 0 a 496 en este batch.</li>
+<li>Idempotencia: validada (re-ejecucion sin cambios).</li>
+</ul>
+<h2 id="batch-117-quejas-mineduc-2023-parcial-cargado">Batch 117 - Quejas Mineduc 2023 (parcial cargado)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Violencia contra la ninez/Quejas Mineduc/20240719123138C8M6SpIQkU1dO569us4WzmhiEojxPhwf.xlsx</li>
+<li>Tipo de fuente: agregada por departamento y tipo de agresion (hoja C1)</li>
+<li>Alcance parcial cargado: 6 departamentos y 250 eventos sinteticos</li>
+<li>Pendiente: completar departamentos restantes y/o ampliar volumen por departamento</li>
+<li>Archivos SQL generados:<ul>
+<li>Catalogos: <code>sql/inserts/catalogos/089_tipo_agresion_ninez_quejas_mineduc.sql</code>, <code>sql/inserts/catalogos/090_estado_escolarizacion_ninez.sql</code></li>
+<li>Transaccional: <code>sql/inserts/transaccional/117_quejas_mineduc_batch1_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_117/117_quejas_mineduc_part_01.sql</code> a <code>..._05.sql</code></li>
+</ul>
+</li>
+<li>Estado de ejecucion: ejecutado por <code>isql</code> con DSN <code>localhost:/.../violencia_guate.fdb</code>.</li>
+<li>Conteos asociados tras carga: <code>caso_violencia_ninez</code> paso de 0 a 250 en este batch.</li>
+<li>Idempotencia: validada (re-ejecucion sin cambios).</li>
+</ul>
+<h2 id="batch-118-violencia-intrafamiliar-2024-parcial-cargado">Batch 118 - Violencia intrafamiliar 2024 (parcial cargado)</h2>
+<ul>
+<li>Fuente: datos_base/Violencia/Violencia intrafamiliar/2024/base-de-datos-violencia-intrafamiliar-ano-2024_v3.xlsx</li>
+<li>Total filas fuente: 36609</li>
+<li>Rango cargado en parcial: 1 a 500</li>
+<li>Rango pendiente: 501 a 36609</li>
+<li>Archivos SQL generados:<ul>
+<li>Catalogo: <code>sql/inserts/catalogos/091_tipo_agresion_intrafamiliar_2024.sql</code></li>
+<li>Transaccional: <code>sql/inserts/transaccional/118_vif_2024_batch1_parcial.sql</code></li>
+<li>Chunks: <code>sql/inserts/transaccional/chunks_118/118_vif_2024_part_01.sql</code> a <code>..._05.sql</code></li>
+</ul>
+</li>
+<li>Estado de ejecucion: ejecutado por <code>isql</code> con DSN <code>localhost:/.../violencia_guate.fdb</code>.</li>
+<li>Conteos asociados tras carga: <code>caso_violencia_intrafamiliar</code> aumento de 496 a 993 en este batch.</li>
+<li>Idempotencia: validada (re-ejecucion sin cambios).</li>
+</ul>
+<h2 id="resumen-de-conteos-despues-de-116117118">Resumen de conteos despues de 116+117+118</h2>
+<ul>
+<li>persona: 249575</li>
+<li>hecho: 248582</li>
+<li>involucrado_hecho: 243959</li>
+<li>caso_violencia_intrafamiliar: 993</li>
+<li>caso_violencia_ninez: 250</li>
+<li>tipo_agresion_intrafamiliar: 10</li>
+<li>tipo_agresion_ninez: 7</li>
+<li>estado_escolarizacion: 1</li>
+</ul>
+<h2 id="diccionarios-vif-20232024-analizados">Diccionarios VIF 2023/2024 (analizados)</h2>
+<ul>
+<li>Fuentes:<ul>
+<li>datos_base/Violencia/Violencia intrafamiliar/2023/Diccionario/2024052300613QDinUvuRa9GjopyXaTuNMXc3gd6Jq1Q1.xlsx</li>
+<li>datos_base/Violencia/Violencia intrafamiliar/2024/diccionario-de-variables-violencia-intrafamiliar.xlsx</li>
+</ul>
+</li>
+<li>Hallazgo: ambos archivos son diccionarios de codigos/etiquetas y no contienen hechos transaccionales para insertar directamente.</li>
+<li>Uso: apoyo para homologacion y validacion semantica del mapeo de columnas/codigos en lotes VIF.</li>
+<li>Estado: sin carga SQL directa requerida en esta fase.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/chayand-wil/violencia-salud-guatemala-DB" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

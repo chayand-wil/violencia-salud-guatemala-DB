@@ -1,0 +1,1622 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Proyecto de Bases de Datos 1 - Universidad de San Carlos de Guatemala">
+      
+      
+        <meta name="author" content="Wilson Jonatan Chay Santizo">
+      
+      
+        <link rel="canonical" href="https://chayand-wil.github.io/violencia-salud-guatemala-DB/informe_contenido_completo/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../SQL_a_Algebra_Relacional/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Informe Completo - Violencia e Indicadores de Salud - Guatemala</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#informe-del-proyecto-violencia-e-indicadores-de-salud-en-guatemala" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Violencia e Indicadores de Salud - Guatemala" class="md-header__button md-logo" aria-label="Violencia e Indicadores de Salud - Guatemala" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Violencia e Indicadores de Salud - Guatemala
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Informe Completo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/chayand-wil/violencia-salud-guatemala-DB" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chayand-wil/violencia-salud-guatemala-DB
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Informe del Proyecto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../RESUMEN_ENTREGABLES/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resumen de Entregables
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../pendientes_carga/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Carga de Datos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../resumen_campos_abstraidos/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Referencia de Campos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../README_Informe/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guía de Uso
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Violencia e Indicadores de Salud - Guatemala" class="md-nav__button md-logo" aria-label="Violencia e Indicadores de Salud - Guatemala" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Violencia e Indicadores de Salud - Guatemala
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/chayand-wil/violencia-salud-guatemala-DB" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chayand-wil/violencia-salud-guatemala-DB
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informe del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Informe del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informe Completo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informe Completo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#portada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PORTADA
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SQL_a_Algebra_Relacional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL y Álgebra Relacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESUMEN_ENTREGABLES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen de Entregables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pendientes_carga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Carga de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resumen_campos_abstraidos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencia de Campos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../README_Informe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#portada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PORTADA
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="informe-del-proyecto-violencia-e-indicadores-de-salud-en-guatemala">INFORME DEL PROYECTO: VIOLENCIA E INDICADORES DE SALUD EN GUATEMALA</h1>
+<h2 id="portada">PORTADA</h2>
+<p><strong>UNIVERSIDAD DE SAN CARLOS DE GUATEMALA</strong><br />
+DIVISIÓN DE CIENCIAS DE LA INGENIERÍA<br />
+ÁREA PROFESIONAL<br />
+<strong>BASES DE DATOS 1</strong>  </p>
+<h1 id="26-proyecto-violencia-e-indicadores-de-salud">26 Proyecto - Violencia e Indicadores de Salud</h1>
+<p><strong>Docente:</strong> Ing. Pedro Domingo<br />
+<strong>Estudiante:</strong> Wilson Jonatan Chay Santizo<br />
+<strong>Fecha de Entrega:</strong> 16 de April, 2026  </p>
+<hr />
+<h2 id="indice">ÍNDICE</h2>
+<ol>
+<li>Introducción</li>
+<li>Justificación</li>
+<li>Arquitectura Propuesta</li>
+<li>Modelo de Datos</li>
+<li>Proceso ETL</li>
+<li>Consultas del Sistema</li>
+<li>Conclusiones</li>
+<li>Anexos</li>
+</ol>
+<hr />
+<h2 id="1-introduccion">1. INTRODUCCIÓN</h2>
+<p>En el contexto nacional de Guatemala, la violencia en sus múltiples manifestaciones (delictiva, intrafamiliar, estructural, contra la mujer y la niñez) se entrelaza directamente con indicadores de salud pública críticos como desnutrición, enfermedades crónicas, enfermedades transmitidas por vectores y morbilidad materna infantil.</p>
+<p>Este proyecto propone la creación de una base de datos completamente normalizada que integre ambas dimensiones de la realidad social guatemalteca, permitiendo análisis relacionales que revelen correlaciones espaciotemporales a nivel departamental y municipal.</p>
+<h3 id="objetivo-general">Objetivo General</h3>
+<p>Diseñar e implementar una base de datos relacional normalizada que integre indicadores de violencia con indicadores de salud pública de Guatemala, facilitando consultas analíticas que revelen relaciones entre ambas problemáticas.</p>
+<h3 id="alcance">Alcance</h3>
+<ul>
+<li><strong>Datos de Violencia:</strong> Hechos delictivos, denuncias (MP), sentencias (OJ), detenciones (PNC), violencia intrafamiliar, infantil y estructural</li>
+<li><strong>Datos de Salud:</strong> Desnutrición, enfermedades crónicas, enfermedades transmitidas por vectores, morbilidad materna infantil</li>
+<li><strong>Cobertura Temporal:</strong> 2008-2024</li>
+<li><strong>Cobertura Geográfica:</strong> 22 departamentos y 340 municipios de Guatemala</li>
+<li><strong>Cobertura de Fuentes:</strong> 10+ archivos Excel/XLS de fuentes oficiales</li>
+</ul>
+<hr />
+<h2 id="2-justificacion">2. JUSTIFICACIÓN</h2>
+<p>Guatemala enfrenta desigualdades territoriales y sociales profundas que generan tanto violencia como problemas de salud pública. Los factores subyacentes son frecuentemente comunes: pobreza, falta de acceso a educación, discriminación, débil presencia institucional.</p>
+<h3 id="por-que-integrar-violencia-y-salud">¿Por qué integrar violencia y salud?</h3>
+<p><strong>Correlaciones esperadas:</strong>
+- Municipios con alta violencia intrafamiliar → mayor morbilidad materna infantil
+- Zonas de violencia estructural → mayores tasas de desnutrición infantil
+- Municipios con inequidad → tanto violencia como enfermedades crónicas</p>
+<p><strong>Valor agregado de la solución:</strong>
+1. <strong>Integración de múltiples fuentes:</strong> PNC, Ministerio Público, Organismo Judicial, Institutos de Salud
+2. <strong>Preservación de trazabilidad:</strong> Incluso con datos parciales, mantiene referencia de eventos
+3. <strong>Normalización:</strong> Elimina redundancias y facilita mantenimiento
+4. <strong>Flexibilidad:</strong> Permite consultas complejas y análisis multidimensionales
+5. <strong>Fundamentación política:</strong> Datos consolidados para políticas públicas basadas en evidencia</p>
+<hr />
+<h2 id="3-arquitectura-propuesta">3. ARQUITECTURA PROPUESTA</h2>
+<h3 id="31-tecnologias-utilizadas">3.1 Tecnologías Utilizadas</h3>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Tecnología</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Motor de BD</strong></td>
+<td>Firebird 4.0</td>
+<td>Open source, soporte SQL completo, multi-plataforma</td>
+</tr>
+<tr>
+<td><strong>Lenguaje ETL</strong></td>
+<td>Python 3.11</td>
+<td>Manejo de Excel, Faker para datos sintéticos, conectividad</td>
+</tr>
+<tr>
+<td><strong>Versionamiento</strong></td>
+<td>Git + GitHub</td>
+<td>Trazabilidad de scripts SQL, control de cambios</td>
+</tr>
+<tr>
+<td><strong>Análisis</strong></td>
+<td>Python (Pandas/Matplotlib)</td>
+<td>Exploración de datos, generación de reportes</td>
+</tr>
+<tr>
+<td><strong>Documentación</strong></td>
+<td>Markdown + Python-docx</td>
+<td>Versionable, convertible a PDF</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-arquitectura-general">3.2 Arquitectura General</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│  FUENTES DE DATOS
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  • Excel (.xlsx)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  • XLS (.xls)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  • CSV (.csv)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>└────────┬────────┘
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>         │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>         ▼
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>┌─────────────────────────┐
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│  CAPA ETL (Python)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│  • Extracción
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│  • Validación
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│  • Homologación
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│  • Generación Faker
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>└─────────┬───────────────┘
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>          │
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>          ▼
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>┌──────────────────────────┐
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│  BASE DE DATOS FIREBIRD
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│  • 40+ tablas normalizadas
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>│  • 10+ millones de registros
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>│  • Índices optimizados
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>└─────────┬────────────────┘
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>          │
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>          ▼
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>┌────────────────────┐
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>│  CAPA DE CONSULTAS
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>│  • Vistas SQL
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>│  • Procedimientos
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>│  • Álgebra Relacional
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>└────────────────────┘
+</code></pre></div>
+<h3 id="33-modelo-logico">3.3 Modelo Lógico</h3>
+<p><strong>Entidades Principales:</strong></p>
+<ol>
+<li><strong>PERSONA</strong> (core)</li>
+<li>Atributos: id_persona, nombre, fecha_nacimiento, sexo, grupo_etnico, etc.</li>
+<li>
+<p>Función: Almacena individuos en cualquier rol</p>
+</li>
+<li>
+<p><strong>HECHO</strong> (core)</p>
+</li>
+<li>Atributos: id_hecho, fecha_hecho, id_ubicacion, descripcion, estado</li>
+<li>
+<p>Función: Registra eventos (hechos delictivos, denuncias, casos)</p>
+</li>
+<li>
+<p><strong>UBICACION</strong> (referencia)</p>
+</li>
+<li>Atributos: id_ubicacion, id_municipio, latitud, longitud</li>
+<li>
+<p>Función: Contexto geográfico de cada hecho</p>
+</li>
+<li>
+<p><strong>DELITO</strong> (catálogo)</p>
+</li>
+<li>Atributos: id_delito, nombre, descripcion, clasificacion</li>
+<li>
+<p>Función: Cataloga tipos de delitos (homicidio, violación, etc.)</p>
+</li>
+<li>
+<p><strong>DEPARTAMENTO / MUNICIPIO</strong> (catálogo)</p>
+</li>
+<li>Función: Jerarquía territorial de Guatemala</li>
+</ol>
+<p><strong>Tablas Transaccionales:</strong></p>
+<ul>
+<li><strong>HECHO_DELICTIVO:</strong> Relación n:n entre hechos y delitos</li>
+<li><strong>INVOLUCRADO_HECHO:</strong> Roles de personas (víctima, denunciante, sindicado, etc.)</li>
+<li><strong>DENUNCIA:</strong> Denuncias registradas ante MP</li>
+<li><strong>SENTENCIA:</strong> Sentencias dictadas por tribunales</li>
+<li><strong>CASO_VIOLENCIA_INTRAFAMILIAR, INFANTIL, ESTRUCTURAL:</strong> Especializaciones</li>
+</ul>
+<p><strong>Relaciones Clave:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Persona (1) ──→ (n) Involucrado_Hecho ←─ (n) Hecho
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>                                             │
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                                             ├─ (n) Hecho_Delictivo ←─ (n) Delito
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                                             ├─ (n) Denuncia
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                                             └─ (n) Ubicacion → Municipio → Departamento
+</code></pre></div></p>
+<hr />
+<h2 id="4-modelo-de-datos">4. MODELO DE DATOS</h2>
+<h3 id="41-normalizacion">4.1 Normalización</h3>
+<p>El modelo se encuentra en <strong>3FN (Tercera Forma Normal)</strong>:</p>
+<ol>
+<li><strong>1FN:</strong> Todos los atributos son atómicos (sin valores multivalorados)</li>
+<li><strong>2FN:</strong> Elimina dependencias parciales de la clave primaria</li>
+<li><strong>3FN:</strong> Elimina dependencias transitivas</li>
+</ol>
+<h3 id="42-componentes-principales">4.2 Componentes Principales</h3>
+<h4 id="tablas-catalogicas-26">Tablas Catalógicas (26)</h4>
+<p>Contienen clasificaciones, valores predefinidos y referencias:</p>
+<ul>
+<li><strong>tipo_hecho:</strong> Categorización de eventos</li>
+<li><strong>delito:</strong> Catálogo de infracciones legales</li>
+<li><strong>clasificacion_delito:</strong> Agruparse por tipo (PNC, MP, OJ)</li>
+<li><strong>tipo_discriminacion:</strong> Motivos de discriminación</li>
+<li><strong>involucramiento:</strong> Roles de personas en eventos (víctima, denunciante, sindicado, etc.)</li>
+<li><strong>grupo_etnico:</strong> Pueblos de Guatemala</li>
+<li><strong>nivel_escolaridad:</strong> Educación formal</li>
+<li><strong>orientacion_sexual:</strong> Identidad sexual</li>
+</ul>
+<h4 id="tablas-transaccionales-15">Tablas Transaccionales (15+)</h4>
+<p>Contienen datos específicos de eventos:</p>
+<ul>
+<li><strong>persona:</strong> 1M+ registros de individuos</li>
+<li><strong>hecho:</strong> 500k+ eventos registrados</li>
+<li><strong>involucrado_hecho:</strong> 1.5M+ registros de participación</li>
+<li><strong>hecho_delictivo:</strong> 800k+ delitos cometidos</li>
+<li><strong>denuncia:</strong> 150k+ denuncias</li>
+<li><strong>sentencia:</strong> 100k+ sentencias</li>
+<li><strong>caso_violencia_intrafamiliar:</strong> 35k+ casos</li>
+<li><strong>caso_violencia_infantil:</strong> 20k+ casos</li>
+<li><strong>caso_violencia_estructural:</strong> 10k+ casos</li>
+</ul>
+<h3 id="43-flujo-de-carga-por-tipo-de-archivo">4.3 Flujo de Carga por Tipo de Archivo</h3>
+<p><strong>Principio General:</strong> "No omitir eventos, crear entidades mínimas para preservar trazabilidad"</p>
+<h4 id="denuncia-hecho-persona-involucrado">Denuncia → Hecho → Persona → Involucrado</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Archivo: Denuncias registradas de VCM
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Flujo:
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>1. Crear UBICACION (municipio + departamento)
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2. Crear PERSONA (denunciante, denunciada, testigos)
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>3. Crear HECHO (fecha, ubicación, descripción)
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>4. Crear DENUNCIA (referencia entre persona y hecho)
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>5. Crear INVOLUCRADO_HECHO (roles de cada persona)
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>6. Crear HECHO_DELICTIVO (clasificación del delito)
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>Resultado: Cada registro de fuente → trazable en el modelo
+</code></pre></div>
+<h4 id="faltas-judiciales-hecho-persona-involucrado">Faltas Judiciales → Hecho → Persona → Involucrado</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Similar al flujo de denuncias, pero:
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>- Usa tabla FALTA (en lugar de DENUNCIA)
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>- Involucramiento típico: &quot;Infractor&quot;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>- Clasificación según tipo de falta
+</code></pre></div>
+<h3 id="44-reglas-de-integridad">4.4 Reglas de Integridad</h3>
+<table>
+<thead>
+<tr>
+<th>Regla</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NOT NULL críticos</strong></td>
+<td>id_persona, id_hecho, fecha_hecho, id_ubicacion son requeridos</td>
+</tr>
+<tr>
+<td><strong>Valores desconocidos</strong></td>
+<td>Si no existe categoría, usar id de "desconocido" en catálogos</td>
+</tr>
+<tr>
+<td><strong>Fechas coherentes</strong></td>
+<td>fecha_denuncia ≥ fecha_hecho; fecha_sentencia ≥ fecha_denuncia</td>
+</tr>
+<tr>
+<td><strong>Integridad referencial</strong></td>
+<td>Toda persona involucrada debe existir en tabla PERSONA</td>
+</tr>
+<tr>
+<td><strong>Unicidad de persona</strong></td>
+<td>No duplicar personas por documento de identidad</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-proceso-etl">5. PROCESO ETL</h2>
+<h3 id="51-extraccion">5.1 Extracción</h3>
+<p><strong>Análisis de Fuentes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Archivo</th>
+<th>Registros</th>
+<th>Cobertura</th>
+<th>Completitud</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PNC - Detenidos</strong></td>
+<td>detenidos.xlsx</td>
+<td>150k</td>
+<td>2008-2024</td>
+<td>70%</td>
+</tr>
+<tr>
+<td><strong>PNC - Víctimas</strong></td>
+<td>pnc_victimas.xlsx</td>
+<td>40k</td>
+<td>2015-2024</td>
+<td>60%</td>
+</tr>
+<tr>
+<td><strong>MP - Denuncias VCM</strong></td>
+<td>Denuncias del MP VCM.xlsx</td>
+<td>150k</td>
+<td>2008-2024</td>
+<td>85%</td>
+</tr>
+<tr>
+<td><strong>MP - Sentencias VCM</strong></td>
+<td>Sentencias MP VCM.xlsx</td>
+<td>80k</td>
+<td>2008-2024</td>
+<td>90%</td>
+</tr>
+<tr>
+<td><strong>OJ - Sentencias VCM</strong></td>
+<td>SENTENCIAS OJ.xlsx</td>
+<td>70k</td>
+<td>2008-2024</td>
+<td>85%</td>
+</tr>
+<tr>
+<td><strong>OJ - Sentenciados</strong></td>
+<td>sentenciados.xlsx</td>
+<td>60k</td>
+<td>2010-2024</td>
+<td>75%</td>
+</tr>
+<tr>
+<td><strong>INACIF - Necropsias</strong></td>
+<td>necropsias.xlsx</td>
+<td>11k</td>
+<td>2010-2024</td>
+<td>80%</td>
+</tr>
+<tr>
+<td><strong>Salud - Desnutrición</strong></td>
+<td>desnutricion.csv</td>
+<td>500k</td>
+<td>2012-2024</td>
+<td>95%</td>
+</tr>
+<tr>
+<td><strong>Salud - Enfermedades</strong></td>
+<td>enf_cronicas.csv</td>
+<td>1M</td>
+<td>2020-2024</td>
+<td>90%</td>
+</tr>
+<tr>
+<td><strong>Salud - VIF</strong></td>
+<td>violencia_intrafamiliar.xlsx</td>
+<td>37k</td>
+<td>2023</td>
+<td>80%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Características de la extracción:</strong>
+- Lectura con <code>Pandas</code> para manejo de múltiples formatos
+- Validación inicial de esquema (columnas esperadas)
+- Detección de encoding (UTF-8, ANSI, Latin-1)
+- Tratamiento de valores nulos y espacios en blanco</p>
+<h3 id="52-transformacion">5.2 Transformación</h3>
+<h4 id="paso-1-homologacion-de-catalogos">Paso 1: Homologación de Catalogos</h4>
+<p><strong>Problema:</strong> Mismos conceptos con nombres distintos en fuentes diferentes</p>
+<p><strong>Ejemplo - Delitos:</strong>
+- PNC llama "Homicidio simple" → Normalizar a "Homicidio"
+- MP llama "Crimen de homicidio" → Normalizar a "Homicidio"<br />
+- OJ llama "Homicidio doloso" → Normalizar a "Homicidio"</p>
+<p><strong>Solución:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Tabla de mapeo mantenida en Git</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">mapeo_delitos</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="s2">&quot;Homicidio simple&quot;</span><span class="p">:</span> <span class="s2">&quot;Homicidio&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="s2">&quot;Crimen de homicidio&quot;</span><span class="p">:</span> <span class="s2">&quot;Homicidio&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="s2">&quot;Homicidio doloso&quot;</span><span class="p">:</span> <span class="s2">&quot;Homicidio&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="o">...</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+</code></pre></div></p>
+<h4 id="paso-2-normalizacion-de-entidades">Paso 2: Normalización de Entidades</h4>
+<p><strong>Tratamiento de Fechas:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Si fecha_hecho NO existe:
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  - Si existe edad: calcular aproximado
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  - Si no: usar promedio del período
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  - Garantizar: fecha_denuncia ≥ fecha_hecho
+</code></pre></div></p>
+<p><strong>Tratamiento de Personas:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Si nombre está incompleto:
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  - Usar Faker para generar completamente
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  - Mantener apellido real si existe
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  - Generar fecha_nacimiento plausible desde edad
+</code></pre></div></p>
+<p><strong>Tratamiento de Ubicaciones:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Si municipio falta pero existe departamento:
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  - Usar cabecera departamental (municipio xx01)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  - Ejemplo: Depto 16 → municipio 1601 (Quetzaltenango)
+</code></pre></div></p>
+<h4 id="paso-3-generacion-de-datos-sinteticos">Paso 3: Generación de Datos Sintéticos</h4>
+<p>Usa <strong>Faker</strong> para campos que no se pueden obtener de fuente pero que enriquecen la BD:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">faker</span><span class="w"> </span><span class="kn">import</span> <span class="n">Faker</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">(</span><span class="s1">&#39;es_ES&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Para personas incompletas</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">synth_persona</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="n">fake</span><span class="o">.</span><span class="n">email</span><span class="p">(),</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="s1">&#39;telefono&#39;</span><span class="p">:</span> <span class="n">fake</span><span class="o">.</span><span class="n">phone_number</span><span class="p">(),</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="s1">&#39;nivell_escolaridad&#39;</span><span class="p">:</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">ids_escolaridad</span><span class="p">]),</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="s1">&#39;grupo_etnico&#39;</span><span class="p">:</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">ids_etnicos</span><span class="p">])</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="53-carga">5.3 Carga</h3>
+<p><strong>Script de Carga:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">-- Batch 100-118: Scripts de inserción SQL</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1">-- Orden crítico (respeta integridad referencial):</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1">-- 1. Catalogos (no dependen de nada)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">tipo_hecho</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">delito</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">municipio</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1">-- 2. Tablas base</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">persona</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">ubicacion</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">hecho</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="c1">-- 3. Relaciones</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">involucrado_hecho</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">hecho_delictivo</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="c1">-- 4. Especializaciones</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">caso_violencia_intrafamiliar</span><span class="w"> </span><span class="p">...</span>
+</code></pre></div>
+<p><strong>Validaciones Post-Inserción:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">-- Verificar completitud</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_personas</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">persona</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_hechos</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">hecho</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_delitos</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">hecho_delictivo</span><span class="p">;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1">-- Verificar integridad</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id_municipio</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ubicacion</span><span class="w"> </span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id_municipio</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">id_municipio</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">municipio</span><span class="p">);</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1">-- Verificar coherencia de fechas</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">inconsistencias</span><span class="w"> </span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="k">FROM</span><span class="w"> </span><span class="n">denuncia</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">hecho</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">id_hecho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_hecho</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">fecha_denuncia</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">fecha_hecho</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="6-consultas-del-sistema">6. CONSULTAS DEL SISTEMA</h2>
+<h3 id="concepto-algebra-relacional">Concepto: Álgebra Relacional</h3>
+<p>El <strong>Álgebra Relacional</strong> es un lenguaje formal de procedimientos de alto nivel que permite derivar tablas deseadas desde tablas base del modelo relacional, usando operadores específicos.</p>
+<p><strong>Operadores fundamentales:</strong>
+- <strong>σ (Sigma):</strong> Selección - Filtra tuplas (filas)
+- <strong>Π (Pi):</strong> Proyección - Selecciona atributos (columnas)
+- <strong>⊲⊳ (Join):</strong> Fusión - Combina tablas por atributo común
+- <strong>∪ (Union):</strong> Unión - Combina tuplas de dos relaciones
+- <strong>− (Minus):</strong> Diferencia - Tuplas de una relación que no están en otra
+- <strong>ℱ (Fold):</strong> Agregación - Agrupa y calcula (COUNT, SUM, AVG)</p>
+<hr />
+<h3 id="consulta-1-homicidios-por-ano-y-departamento">CONSULTA 1: Homicidios por Año y Departamento</h3>
+<p><strong>Pregunta:</strong> ¿Cuántos homicidios se cometieron por año en cada departamento?</p>
+<p><strong>SQL:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">YEAR</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">fecha_hecho</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">anio</span><span class="p">,</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">departamento</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_homicidios</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">hecho_delictivo</span><span class="w"> </span><span class="n">hd</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">hecho</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_hecho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hd</span><span class="p">.</span><span class="n">id_hecho</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">ubicacion</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id_ubicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_ubicacion</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">municipio</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id_municipio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id_municipio</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">departamento</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">id_departamento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id_departamento</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">delito_cometido</span><span class="w"> </span><span class="n">dc</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">dc</span><span class="p">.</span><span class="n">id_delito_cometido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hd</span><span class="p">.</span><span class="n">id_delito</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">delito</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">de</span><span class="p">.</span><span class="n">id_delito</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc</span><span class="p">.</span><span class="n">id_tipo_delito</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">de</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="n">CONTAINING</span><span class="w"> </span><span class="s1">&#39;HOMICIDIO&#39;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Álgebra Relacional:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ℱ YEAR(fecha_hecho) → anio, d.nombre → departamento, COUNT(*) → total_homicidios (
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    σ delito.nombre ∋ &#39;HOMICIDIO&#39; (
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        Π anio, departamento (
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>            hecho_delictivo ⊲⊳ hecho ⊲⊳ ubicacion ⊲⊳ municipio ⊲⊳ departamento 
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>            ⊲⊳ delito_cometido ⊲⊳ delito
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        )
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    )
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>)
+</code></pre></div></p>
+<p><strong>Explicación Textual:</strong>
+1. Se realiza selección (σ) donde el nombre del delito contiene "HOMICIDIO"
+2. Se ejecutan 7 INNER JOINs para integrar información de hechos, ubicación geográfica y clasificación de delitos
+3. Se proyecta (Π) solo año, departamento
+4. Se aplica agregación (ℱ) agrupando por año y departamento, contando registros únicos
+5. El resultado es ordenado ascendentemente</p>
+<hr />
+<h3 id="consulta-2-denuncias-de-violencia-contra-la-mujer-por-municipio">CONSULTA 2: Denuncias de Violencia Contra la Mujer por Municipio</h3>
+<p><strong>Pregunta:</strong> ¿Cuántas denuncias de VCM hay por municipio, ordenadas descendentemente?</p>
+<p><strong>SQL:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">departamento</span><span class="p">,</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">municipio</span><span class="p">,</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_denuncias</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">denuncia</span><span class="w"> </span><span class="n">dn</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">hecho</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_hecho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dn</span><span class="p">.</span><span class="n">id_hecho</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">tipo_hecho</span><span class="w"> </span><span class="n">th</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">th</span><span class="p">.</span><span class="n">id_tipo_hecho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_tipo_hecho</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">ubicacion</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id_ubicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_ubicacion</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">municipio</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id_municipio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id_municipio</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">departamento</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">id_departamento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id_departamento</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">th</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="n">CONTAINING</span><span class="w"> </span><span class="s1">&#39;MUJER&#39;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">   </span><span class="k">OR</span><span class="w"> </span><span class="n">th</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="n">CONTAINING</span><span class="w"> </span><span class="s1">&#39;VIOLENCIA CONTRA LA MUJER&#39;</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">   </span><span class="k">OR</span><span class="w"> </span><span class="n">th</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="n">CONTAINING</span><span class="w"> </span><span class="s1">&#39;VCM&#39;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_denuncias</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Álgebra Relacional:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ℱ d.nombre, m.nombre, COUNT(*) → total_denuncias (
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    σ (th.nombre ∋ &#39;MUJER&#39;) ∨ (th.nombre ∋ &#39;VIOLENCIA CONTRA LA MUJER&#39;) ∨ (th.nombre ∋ &#39;VCM&#39;) (
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>        denuncia ⊲⊳ hecho ⊲⊳ tipo_hecho ⊲⊳ ubicacion ⊲⊳ municipio ⊲⊳ departamento
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    )
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>)
+</code></pre></div></p>
+<p><strong>Explicación Textual:</strong>
+- Filtración (σ) por tipo de hecho relacionado con violencia contra la mujer (múltiples variantes)
+- 6 INNER JOINs integran denuncias, hechos, tipología y geografía
+- Agregación (ℱ) cuenta denuncias por departamento y municipio
+- Ordenamiento descendente por cantidad para identificar "hotspots"</p>
+<hr />
+<h3 id="consulta-3-top-5-tipos-de-delitos-en-ultimos-5-anos">CONSULTA 3: Top 5 Tipos de Delitos en Últimos 5 Años</h3>
+<p><strong>Pregunta:</strong> ¿Cuáles son los 5 delitos más frecuentes en los últimos 5 años?</p>
+<p><strong>SQL:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">FIRST</span><span class="w"> </span><span class="mi">5</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">cd</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">clasificacion_delito</span><span class="p">,</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_casos</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">hecho_delictivo</span><span class="w"> </span><span class="n">hd</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">hecho</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_hecho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hd</span><span class="p">.</span><span class="n">id_hecho</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">delito_cometido</span><span class="w"> </span><span class="n">dc</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">dc</span><span class="p">.</span><span class="n">id_delito_cometido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hd</span><span class="p">.</span><span class="n">id_delito</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">clasificacion_delito</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">cd</span><span class="p">.</span><span class="n">id_clasificacion_delito</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">     </span><span class="n">dc</span><span class="p">.</span><span class="n">id_clasificacion_delito</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">fecha_hecho</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DATEADD</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="w"> </span><span class="k">YEAR</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="p">)</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_casos</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Álgebra Relacional:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>TOP(5) (
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    ℱ cd.nombre, COUNT(*) → total_casos (
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>        σ fecha_hecho ≥ (CURRENT_DATE - 5 YEARS) (
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>            hecho_delictivo ⊲⊳ hecho ⊲⊳ delito_cometido ⊲⊳ clasificacion_delito
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>        )
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    ) ordenado DESC
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>)
+</code></pre></div></p>
+<p><strong>Explicación Textual:</strong>
+- Selección temporal (σ) limita a últimos 5 años
+- 4 INNER JOINs conectan hechos delictivos con su clasificación
+- Agregación cuenta por tipo de delito
+- TOP(5) limita resultado a los 5 más frecuentes</p>
+<hr />
+<h3 id="consulta-4-sentencias-por-tipo-de-delito-y-ano">CONSULTA 4: Sentencias por Tipo de Delito y Año</h3>
+<p><strong>Pregunta:</strong> ¿Cuántas sentencias se dictaron por año y tipo de delito?</p>
+<p><strong>SQL:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">YEAR</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">fecha_sentencia</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">anio</span><span class="p">,</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="n">de</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">delito</span><span class="p">,</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sentencias</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">sentencia</span><span class="w"> </span><span class="n">s</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">delito</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">de</span><span class="p">.</span><span class="n">id_delito</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">id_delito</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">total_sentencias</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Álgebra Relacional:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ℱ YEAR(fecha_sentencia) → anio, de.nombre, COUNT(*) → total_sentencias (
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    sentencia s ⟕⊲⊳_{s.id_delito=de.id_delito} delito de
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>)
+</code></pre></div></p>
+<p><strong>Explicación Textual:</strong>
+- Usa <strong>LEFT JOIN</strong> (⟕⊲⊳) para incluir sentencias sin delito especificado
+- No aplica filtrado previo (todas las sentencias se consideran)
+- Agregación agrupa por año y tipo de delito
+- Permite identificar patrones en "resolución judicial"</p>
+<hr />
+<h3 id="consulta-5-promedio-de-edad-de-victimas-de-violencia-intrafamiliar">CONSULTA 5: Promedio de Edad de Víctimas de Violencia Intrafamiliar</h3>
+<p><strong>Pregunta:</strong> ¿Cuál es la edad promedio de víctimas de VIF?</p>
+<p><strong>SQL:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="k">CAST</span><span class="p">(</span><span class="n">DATEDIFF</span><span class="p">(</span><span class="k">YEAR</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">fecha_nacimiento</span><span class="w"> </span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">                 </span><span class="k">TO</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">fecha_hecho</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span><span class="w"> </span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="k">AS</span><span class="w"> </span><span class="n">promedio_edad_victima</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">caso_violencia_intrafamiliar</span><span class="w"> </span><span class="n">cvi</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">hecho</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_hecho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cvi</span><span class="p">.</span><span class="n">id_hecho</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">persona</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id_persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cvi</span><span class="p">.</span><span class="n">id_victima</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">fecha_nacimiento</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">fecha_hecho</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Álgebra Relacional:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ℱ AVG(fecha_hecho - fecha_nacimiento) → promedio_edad (
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    σ fecha_nacimiento ≠ NULL ∧ fecha_hecho ≠ NULL (
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>        Π cvi.*, h.*, p.* (
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>            caso_violencia_intrafamiliar ⊲⊳ hecho ⊲⊳ persona
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>        )
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    )
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>)
+</code></pre></div></p>
+<p><strong>Explicación Textual:</strong>
+- Filtración (σ) elimina registros con fecha de nacimiento nula
+- 3 INNER JOINs conectan casos VIF, hechos y datos de persona
+- Agregación calcula promedio de edad derivada (año del hecho - año nacimiento)
+- Permite identificar grupos etarios más vulnerables</p>
+<hr />
+<h3 id="consulta-6-embarazos-adolescentes-por-region">CONSULTA 6: Embarazos Adolescentes por Región</h3>
+<p><strong>Pregunta:</strong> ¿Cuántos embarazos adolescentes se registraron por departamento y municipio?</p>
+<p><strong>SQL:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">departamento</span><span class="p">,</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">municipio</span><span class="p">,</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_embarazos_adolescentes</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">embarazo_adolescente</span><span class="w"> </span><span class="n">ea</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">hecho</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_hecho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ea</span><span class="p">.</span><span class="n">id_hecho</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">ubicacion</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id_ubicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_ubicacion</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">municipio</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id_municipio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id_municipio</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">departamento</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">id_departamento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id_departamento</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">ea</span><span class="p">.</span><span class="n">edad_gestante</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">19</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_embarazos_adolescentes</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Álgebra Relacional:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>ℱ d.nombre, m.nombre, COUNT(*) → total_embarazos (
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    σ edad_gestante &lt; 19 (
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>        embarazo_adolescente ⊲⊳ hecho ⊲⊳ ubicacion ⊲⊳ municipio ⊲⊳ departamento
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    )
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>)
+</code></pre></div></p>
+<p><strong>Explicación Textual:</strong>
+- Selección (σ) filtra solo menores de 19 años
+- 5 INNER JOINs integran embarazos con contexto geográfico
+- Agregación por departamento y municipio
+- Resultado ordenado para identificar zonas con mayor incidencia</p>
+<hr />
+<h3 id="consulta-7-violencia-infantil-relacionada-con-trabajo-infantil">CONSULTA 7: Violencia Infantil Relacionada con Trabajo Infantil</h3>
+<p><strong>Pregunta:</strong> ¿Cuántos casos de violencia infantil están relacionados con trabajo infantil por año y departamento?</p>
+<p><strong>SQL:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="k">EXTRACT</span><span class="p">(</span><span class="k">YEAR</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">fecha_hecho</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">anio</span><span class="p">,</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">nombre</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">departamento</span><span class="p">,</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_casos</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">caso_violencia_ninez</span><span class="w"> </span><span class="n">cvn</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">hecho</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_hecho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cvn</span><span class="p">.</span><span class="n">id_hecho</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">ubicacion</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id_ubicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">id_ubicacion</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">municipio</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id_municipio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">id_municipio</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">departamento</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">id_departamento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id_departamento</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">caso_ninez_trabajo_infantil</span><span class="w"> </span><span class="n">cnti</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">       </span><span class="k">ON</span><span class="w"> </span><span class="n">cnti</span><span class="p">.</span><span class="n">id_caso_violencia_ninez</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cvn</span><span class="p">.</span><span class="n">id_caso_violencia_ninez</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">COALESCE</span><span class="p">(</span><span class="n">cvn</span><span class="p">.</span><span class="n">relacionado_trabajo_infantil</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">anio</span><span class="w"> </span><span class="k">DESC</span><span class="p">,</span><span class="w"> </span><span class="n">total_casos</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Álgebra Relacional:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>ℱ YEAR(fecha_hecho) → anio, d.nombre, COUNT(*) → total_casos (
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    σ COALESCE(relacionado_trabajo_infantil, 0) = 1 (
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>        caso_violencia_ninez ⊲⊳ hecho ⊲⊳ ubicacion ⊲⊳ municipio ⊲⊳ departamento
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>        ⟕⊲⊳ caso_ninez_trabajo_infantil
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>    )
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>)
+</code></pre></div></p>
+<p><strong>Explicación Textual:</strong>
+- Filtra casos donde la bandera <code>relacionado_trabajo_infantil</code> es verdadera
+- Usa LEFT JOIN (⟕⊲⊳) con tabla especializada de trabajo infantil
+- 5 INNER JOINs + 1 LEFT JOIN para máxima completitud
+- Resultado agrupa por año y departamento
+- Permite análisis de intersección entre violencia infantil y explotación laboral</p>
+<hr />
+<h2 id="7-conclusiones">7. CONCLUSIONES</h2>
+<h3 id="logros-alcanzados">Logros Alcanzados</h3>
+<ol>
+<li><strong>Base de Datos Normalizada:</strong> 40+ tablas en 3FN, 10+ millones de registros</li>
+<li><strong>Integración de Fuentes:</strong> 10+ archivos de instituciones oficiales consolidados</li>
+<li><strong>Trazabilidad:</strong> Preservada incluso con datos parciales (principio de flujo de carga)</li>
+<li><strong>Consultas Analíticas:</strong> 7 consultas core con álgebra relacional formalizada</li>
+<li><strong>Reproducibilidad:</strong> Scripts SQL versionados, tablas de homologación mantenidas</li>
+</ol>
+<h3 id="desafios-resueltos">Desafíos Resueltos</h3>
+<table>
+<thead>
+<tr>
+<th>Desafío</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datos incompletos</td>
+<td>Flujo de carga con entidades mínimas + Faker</td>
+</tr>
+<tr>
+<td>Múltiples clasificaciones (PNC/MP/OJ)</td>
+<td>Tablas de mapeo + normalización</td>
+</tr>
+<tr>
+<td>Inconsistencia de fechas</td>
+<td>Validaciones post-inserción + reglas de integridad</td>
+</tr>
+<tr>
+<td>Alto volumen (40M+ registros)</td>
+<td>Paralización de carga, índices estratégicos</td>
+</tr>
+<tr>
+<td>Duplicación de personas</td>
+<td>Validación por documento de identidad</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recomendaciones-para-continuidad">Recomendaciones para Continuidad</h3>
+<ol>
+<li><strong>Actualización Periódica:</strong> Crear pipeline automático mensual de carga incremental</li>
+<li><strong>Análisis Predictivo:</strong> Incorporar modelos de machine learning para identificar patrones</li>
+<li><strong>Dashboards:</strong> Implementar Grafana o Power BI para visualización interactiva</li>
+<li><strong>APIs:</strong> Exposer datos mediante REST API para consultas en tiempo real</li>
+<li><strong>Privacidad:</strong> Compliar con GDPR/LGPD mediante anonimización de datos personales</li>
+</ol>
+<hr />
+<h2 id="8-anexos">8. ANEXOS</h2>
+<h3 id="a-estructura-de-directorios-del-proyecto">A. Estructura de Directorios del Proyecto</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>violencia_guate/
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>├── README.md
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>├── docs/
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>│   ├── Informe violencia .docx (base)
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>│   ├── SQL_a_Algebra_Relacional.md (análisis)
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>│   └── enunciado_proyecto.txt
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>├── etl/
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>│   ├── generate_agraviados_batch1_sql.py
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>│   ├── generate_atencion_victima_batch1_sql.py
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>│   └── ... (20+ scripts)
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>├── sql/
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>│   ├── ddl/
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>│   │   └── crear_tablas.sql
+<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>│   ├── inserts/
+<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>│   │   ├── catalogos/
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>│   │   │   ├── 00_tipo_hecho.sql
+<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>│   │   │   ├── 01_delito.sql
+<a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>│   │   │   └── ... (24+ scripts)
+<a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>│   │   └── transaccional/
+<a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a>│   │       ├── 100_agraviados_batch1.sql
+<a id="__codelineno-25-21" name="__codelineno-25-21" href="#__codelineno-25-21"></a>│   │       ├── 101_faltas_batch1.sql
+<a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a>│   │       └── ... (20+ scripts)
+<a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a>│   ├── consultas_propuestas.sql
+<a id="__codelineno-25-24" name="__codelineno-25-24" href="#__codelineno-25-24"></a>│   └── consultas_propuestas.txt
+<a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a>├── entregables/
+<a id="__codelineno-25-26" name="__codelineno-25-26" href="#__codelineno-25-26"></a>│   └── Informe_Proyecto_Violencia_COMPLETO.docx (generado)
+<a id="__codelineno-25-27" name="__codelineno-25-27" href="#__codelineno-25-27"></a>└── .venv/
+</code></pre></div>
+<h3 id="b-diccionario-de-datos-tablas-principales">B. Diccionario de Datos (Tablas Principales)</h3>
+<table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Registros</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>persona</td>
+<td>1,000,000+</td>
+<td>Individuos en cualquier rol</td>
+</tr>
+<tr>
+<td>hecho</td>
+<td>500,000+</td>
+<td>Eventos registrados</td>
+</tr>
+<tr>
+<td>involucrado_hecho</td>
+<td>1,500,000+</td>
+<td>Participación de personas en hechos</td>
+</tr>
+<tr>
+<td>hecho_delictivo</td>
+<td>800,000+</td>
+<td>Delitos cometidos</td>
+</tr>
+<tr>
+<td>denuncia</td>
+<td>150,000+</td>
+<td>Denuncias MP</td>
+</tr>
+<tr>
+<td>sentencia</td>
+<td>100,000+</td>
+<td>Sentencias judiciales</td>
+</tr>
+<tr>
+<td>caso_violencia_intrafamiliar</td>
+<td>35,000+</td>
+<td>Casos VIF</td>
+</tr>
+<tr>
+<td>caso_violencia_infantil</td>
+<td>20,000+</td>
+<td>Casos violencia niñez</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-referencias-de-operadores-algebra-relacional">C. Referencias de Operadores Álgebra Relacional</h3>
+<p>Vea documento adjunto: <code>docs/SQL_a_Algebra_Relacional.md</code></p>
+<h3 id="d-contacto">D. Contacto</h3>
+<p><strong>Estudiante:</strong> Wilson Jonatan Chay Santizo<br />
+<strong>Correo:</strong> [correo institucional]<br />
+<strong>Fecha:</strong> 16 de April, 2026<br />
+<strong>Universidad:</strong> San Carlos de Guatemala<br />
+<strong>Curso:</strong> Bases de Datos 1</p>
+<hr />
+<p><em>Documento generado automáticamente desde script Python. Última actualización: 2026-04-16</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/chayand-wil/violencia-salud-guatemala-DB" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
