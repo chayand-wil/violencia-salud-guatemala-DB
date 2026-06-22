@@ -21,15 +21,12 @@
 5. - (pte)Promedio de edad de las víctimas de violencia intrafamiliar. 
 15. - no hay datos Número de personas por hogar en casos con denuncias de violencia intrafamiliar.
 
+
 6. -Distribución de embarazos adolescentes (menores de 19 años) por región.
 7. -Cantidad de casos de violencia infantil relacionados con trabajo infantil.
 16. - no hay datos Tasa de denuncias de violencia infantil en población escolarizada vs. no escolarizada.
 17. - no hay datos Casos de trabajo infantil por sector económico (agricultura, industria, etc.).
         18. + Relación entre edad y tipo de violencia sufrida (infantil, intrafamiliar, estructural, etc.).
-    
-    
-    
-
 
 
 
@@ -55,78 +52,51 @@
  
 
 
+
+
+
+
+
+
  
 
-estos son los campos mas importantes:
-año_ing
-mes_ing	
-día_ing
-mupio_ocu
+4. /Sentencias dictadas por tipo de delito y año.(seleccionar un ano y tipo de delito en concreto?)
 
-edad_per(usarlo en persona)
-sexo_per(usarlo en persona)
+
+        11. /pocos datos revisar Tasa de denuncias de violencia estructural procesadas vs. no procesadas.
+   
+
+5. - (pte)Promedio de edad de las víctimas de violencia intrafamiliar. 
+15. - no hay datos Número de personas por hogar en casos con denuncias de violencia intrafamiliar.
+
+
+6. -Distribución de embarazos adolescentes (menores de 19 años) por región.
+7. -Cantidad de casos de violencia infantil relacionados con trabajo infantil.
+16. - no hay datos Tasa de denuncias de violencia infantil en población escolarizada vs. no escolarizada.
+17. - no hay datos Casos de trabajo infantil por sector económico (agricultura, industria, etc.).
+        
+
+28. -NO jala Correlación entre casos de desnutrición y ocurrencia de hechos delictivos por municipio.
+24. Relación entre casos de desnutrición aguda infantil y registros de violencia intrafamiliar por departamento.
     
-- crearemos la tabla(catalogo): causa_muerte(campos(nombre, descripcion))
-- se usara la misma ubicacion para la persona y el hecho
-- usa los datos de fecha en hecho
 
-- se crearan los registros:
-    -   ubicacion 
-        id_municipio(el id correspondiente)
-    - hecho
-        id_tipo_hecho: 1
 
-    - persona
-        - nombre/apellidos(con faker)
+ 
 
-    - necropsia
+ 
 
-    - involucrado_hecho
-        id_tipo_involucramiento: 14
+
+   
 
 
 
-ubicacion(
-	id_municipio -- municipio
-	id_area_geografica -- area_geografica
-	ciudad
-	zona
-	direccion_referencia
-);
 
-persona(
-	Nombres
-	apellidos
-	fecha_nacimiento
-	cui
-	id_genero -- genero
-	id_orientacion_sexual -- orientacion_sexual
-	id_grupo_etnico -- grupo_etnico
-	id_estado_civil -- estado_civil
-	id_condicion_alfabetica -- condicion_alfabetica
-	id_nivel_escolaridad  -- nivel_escolaridad
-	id_origen -- ubicacion
-	es_extranjero
-);
 
-hecho(
-	id_tipo_hecho -- tipo_hecho
-	id_ubicacion -- ubicacion
-	fecha_hecho
-);
+5. - Promedio de edad de las víctimas de violencia intrafamiliar. 
 
-necropsia(
-	id_hecho -- hecho
-	id_persona -- persona
-	id_causa_muerte -- causa_muerte
-);
+15. - no hay datos Número de personas por hogar en casos con denuncias de violencia intrafamiliar.
 
 
 
-involucrado_hecho(
-	id_hecho -- hecho
-	id_involucrado -- persona
-	id_tipo_involucramiento -- involucramiento
-);
 
-
+ 

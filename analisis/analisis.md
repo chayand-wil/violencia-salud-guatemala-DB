@@ -427,6 +427,19 @@ caso_vif_hogar(
 );
 
 
+caso_intrafamiliar(
+	id_municipio -- municipio
+	id_genero -- genero
+	fecha
+	cantidad_personas_hogar
+	edad	
+);
+
+
+
+
+
+
 
 
 
